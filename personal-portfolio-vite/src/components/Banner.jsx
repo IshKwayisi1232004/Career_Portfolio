@@ -54,7 +54,12 @@ export const Banner = () => {
                         <span className="tagline">
                             Welcome to my Portfolio
                         </span>
-                        <h1>{`Hi I'm Ishmael `}<span clasName="wrap">{text}</span></h1>
+                        <h1>{`Hi I'm Ishmael `}
+                            <br/>
+                            <span className="wrap">
+                                {text}
+                            </span>
+                        </h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae tenetur voluptas quia assumenda perspiciatis, suscipit consequatur omnis nam explicabo molestiae velit tempore expedita nisi quas, modi aut nostrum maxime excepturi?</p>
                         <button onClick={() => console.log('connect')}>Let's connect</button>
                     </Col>
