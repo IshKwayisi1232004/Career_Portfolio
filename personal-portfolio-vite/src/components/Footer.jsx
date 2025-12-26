@@ -7,13 +7,13 @@ export const Footer = () => {
     return(
         <footer className="footer">
             <Container>
-                <Row className="align-item-center">
-                    <Col sm={6} className="text-center text-sm-end">
+                <Row className="align-items-center">
+                    <Col size={12} sm={6}>
                         <img src={logo} alt="Logo"/>    
                     </Col>
                     <Col sm={6} className="text-center text-sm-end">
                         <div className="social-icon">
-                            <img src={navIcon1}/>
+                            <a href="https://www.linkedin.com/in/ishmael-kwayisi/"><img src={navIcon1} alt="Icon"/></a>
                         </div>
                         <p>CopyRight 2025. All rights Reserved by Ishmael Kwayisi</p>
                     </Col>
