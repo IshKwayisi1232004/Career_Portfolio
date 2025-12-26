@@ -4,6 +4,7 @@ import projImg2 from "../assets/project-img2.png";
 import projImg3 from "../assets/project-img3.png";
 import {ProjectCard} from "./ProjectCard";
 import colorSharp2 from "../assets/color-sharp2.png";
+//import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
 

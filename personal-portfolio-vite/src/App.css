@@ -1,18 +1,26 @@
 /************ Custom Font ************/
 @font-face {
-	font-family: Centra;
-	src: url('./assets/font/CentraNo2-Bold.ttf');
-	font-weight: 700;
+  font-family: 'Centra';
+  src: url('/src/assets/font/CentraNo2-Book.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
+
 @font-face {
-	font-family: Centra;
-	src: url('./assets/font/CentraNo2-Medium.ttf');
-	font-weight: 500;
+  font-family: 'Centra';
+  src: url('/src/assets/font/CentraNo2-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
+
 @font-face {
-	font-family: Centra;
-	src: url('./assets/font/CentraNo2-Book.ttf');
-	font-weight: 400;
+  font-family: 'Centra';
+  src: url('/src/assets/font/CentraNo2-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 /************ Default Css ************/
@@ -418,33 +426,40 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 30px;
   overflow: hidden;
   margin-bottom: 24px;
+
 }
+
 .proj-imgbx::before {
   content: "";
+  position: absolute;
+  inset: 0;
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
   opacity: 0.85;
-  position: absolute;
-  width: 100%;
   height: 0;
-  transition: 0.4s ease-in-out;
+  transition: height 0.4s ease-in-out;
+  z-index: 1;
 }
+
 .proj-imgbx:hover::before {
   height: 100%;
 }
+
 .proj-txtx {
   position: absolute;
-  text-align: center;
-  top: 65%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: 0.5s ease-in-out;
-  opacity: 0;
+  text-align: center;
   width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 2;
 }
+
 .proj-imgbx:hover .proj-txtx {
-  top: 50%;
   opacity: 1;
 }
+
 .proj-txtx h4 {
   font-size: 30px;
   font-weight: 700;
