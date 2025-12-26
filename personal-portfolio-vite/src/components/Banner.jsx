@@ -61,7 +61,14 @@ export const Banner = () => {
                                 {text}
                             </span>
                         </h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae tenetur voluptas quia assumenda perspiciatis, suscipit consequatur omnis nam explicabo molestiae velit tempore expedita nisi quas, modi aut nostrum maxime excepturi?</p>
+                        <p>My passion for coding began in 8th grade during a CoderZ competition and grew into a drive to use technology to help others. I’m now pursuing a career in computer science, with interests in software engineering, full-stack development, UI/UX design, and data analysis.
+
+                            Through school and personal projects, I’ve gained experience in C++, Java, C#, and Python, and I’m learning modern web tools like Vite, React, and Git. My favorite projects are the ones focused that never have an easy solution. Since programming offers an endless number of possibilities to solve problems, I like to explore them all the best I can.
+
+                            Outside of coding, I stay creative and analytical through puzzle-focused games, drawing, creative writing, and working out. These hobbies also allow me to reinforce my perseverance, organization and open-mindedness.
+
+                            I’m currently seeking an internship or entry-level role where I can make meaningful contributions, learn from industry professionals, and help build technology that makes a positive impact on society.
+                            And I believe with the growing nature of technology, those aspirations will come true.</p>
                         <button onClick={() => console.log('connect')}>Let's connect</button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>

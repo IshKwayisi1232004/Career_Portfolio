@@ -35,7 +35,7 @@ export const Skills = () => {
                             <h2>
                                 Skills
                             </h2>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui eos amet velit culpa omnis veniam necessitatibus praesentium, fugiat repellat illum suscipit incidunt expedita vel molestias assumenda quae beatae exercitationem quos.</p>
+                            <p>The following skills have been actively applied across multiple projects, allowing me to design and build meaningful experiences for end users. I continue to refine and expand these skills through ongoing development and future work.</p>
                             <Carousel responsive={responsive} infinite={true} className="skill-slider">
                                 <div className="item">
                                     <img src={meter1} alt="Image" />
