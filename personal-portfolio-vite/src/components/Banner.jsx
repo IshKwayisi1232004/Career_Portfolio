@@ -6,7 +6,7 @@ import { ArrowRightCircle } from "react-bootstrap-icons";
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = [ "Software Engineer", "Web Developer", "Embedded Programmer" ];
+    const toRotate = [ "CS Undergrad at Southern New Hampshire University", "Software Engineer", "Web Developer", "Embedded Programmer", "Gamer" ];
     const [text, setText] = useState('');
     const [index, setIndex ] = useState(1);
     const [delta, setDelta] = useState(300 - Math.random() * 100);
@@ -54,12 +54,13 @@ export const Banner = () => {
                         <span className="tagline">
                             Welcome to my Portfolio
                         </span>
-                        <h1>{`Hi I'm Ishmael `}
-                            <br/>
+                        <h1>{`Hi I'm Ishmael Kwayisi`}</h1>
+                        <h2>
+                           
                             <span className="wrap">
                                 {text}
                             </span>
-                        </h1>
+                        </h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae tenetur voluptas quia assumenda perspiciatis, suscipit consequatur omnis nam explicabo molestiae velit tempore expedita nisi quas, modi aut nostrum maxime excepturi?</p>
                         <button onClick={() => console.log('connect')}>Let's connect</button>
                     </Col>
