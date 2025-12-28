@@ -1,7 +1,7 @@
 import {useState, useEffect} from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-//import headerImg from "../assets/header-tag.svg";
+import headerImg from "../assets/Avatar_Pic.png";
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
@@ -54,7 +54,7 @@ export const Banner = () => {
                         <span className="tagline">
                             Welcome to my Portfolio
                         </span>
-                        <h1>{`Hi I'm Ishmael Kwayisi`}</h1>
+                        <h1>{`Hello, I'm Ishmael Kwayisi`}</h1>
                         <h2>
                            
                             <span className="wrap">
@@ -69,7 +69,7 @@ export const Banner = () => {
                         <button onClick={() => console.log('connect')}>Let's connect</button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
-                        {/* <img src={headerImg} alt="Header Img" />  */}
+                        <img src={headerImg} alt="Header Img" /> 
                     </Col>
                 </Row>
             </Container>
