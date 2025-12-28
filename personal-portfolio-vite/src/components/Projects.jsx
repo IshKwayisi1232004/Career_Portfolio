@@ -1,10 +1,11 @@
 import {Col, Container, Tab, Row, Nav} from "react-bootstrap";
-import projImg1 from "../assets/project-img1.png";
+//import projImg1 from "../assets/project-img1.png";
 import projImg2 from "../assets/project-img2.png";
-import projImg3 from "../assets/project-img3.png";
+//import projImg3 from "../assets/project-img3.png";
 import development from "../assets/In_Development.jpg";
 import crown from "../assets/CrownofExodus_Thumbnail.png";
 import zelda from "../assets/Project-Not-Zelda_Thumbnail.png";
+import portfolio from "../assets/Portfolio_Thumbnail.png";
 import {ProjectCard} from "./ProjectCard";
 import colorSharp2 from "../assets/color-sharp2.png";
 //import TrackVisibility from 'react-on-screen';
@@ -23,14 +24,14 @@ export const Projects = () => {
             imgUrl: crown,
         },
         {
-            title: "E-Commerce Site",
+            title: "Radar Arduino Project",
             description: "Personal Project",
-            imgUrl: projImg3,
+            imgUrl: development,
         },
         {
             title: "Portfolio Website",
             description: "Personal Project",
-            imgUrl: projImg1,
+            imgUrl: portfolio,
         },
         {
             title: "Water Project",
