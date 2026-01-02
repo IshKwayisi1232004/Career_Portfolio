@@ -8,6 +8,7 @@ import zelda from "../assets/Project-Not-Zelda_Thumbnail.png";
 import portfolio from "../assets/Portfolio_Thumbnail.png";
 import {ProjectCard} from "./ProjectCard";
 import colorSharp2 from "../assets/color-sharp2.png";
+import water from "../assets/water.jfif";
 //import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
@@ -36,7 +37,7 @@ export const Projects = () => {
         {
             title: "Water Project",
             description: "EG-110 Project",
-            imgUrl: projImg2,
+            imgUrl: water,
         },
         {
             title: "Untitled Project",
