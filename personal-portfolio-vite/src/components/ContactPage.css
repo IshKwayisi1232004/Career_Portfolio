@@ -38,13 +38,15 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
 
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+
+    z-index: 1;
 }
 
 .spyro-image {
     width: auto;
     height: 400px;
     object-fit: contain;
-    margin-right: 100px;
+    margin-right: 200px;
 }
 
 .contact-info {
@@ -70,7 +72,7 @@
     margin-top: 25px;
 }
 
-.social-button {
+.social-link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,9 +86,11 @@
     background-color: #ffffff;
     color: #242424;
 
+    cursor: pointer;
+
     transition: transform 0.2s ease;
 }
 
-.social-button:hover {
+.social-link:hover {
     transform: scale(1.1);
 }

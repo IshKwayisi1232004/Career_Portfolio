@@ -31,7 +31,7 @@ export const Contact = () => {
                         </a>}
 
                         {<a
-                            href="https://github.com/IshKwayisi1232004"
+                            href="https://www.linkedin.com/in/ishmael-kwayisi/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="social-link"
