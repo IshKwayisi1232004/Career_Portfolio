@@ -14,38 +14,32 @@ export const Contact = () => {
                     className="spyro-image" 
                 />
 
-                <h2>
-                    Contact
-                </h2>
+                <div className="contact-info">
+                    <h2>
+                        Contact
+                    </h2>
 
-                <div className="contact-actions">
-                    <a href="#about" className="home-button">
-                        About
-                    </a>
+                    <div className="contact-actions">
+                        {<a
+                            href="https://github.com/IshKwayisi1232004"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="social-link"
+                            aria-label="Github"
+                        >
+                            <Github size={48} />
+                        </a>}
 
-                    <a href ="#projects" className="home-button">
-                        Projects
-                    </a>
-
-                    {<a
-                        href="https://github.com/IshKwayisi1232004"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="social-link"
-                        aria-label="GitHub"
-                    >
-                        <Github size={32} />
-                    </a>}
-
-                    {<a
-                        href="https://github.com/IshKwayisi1232004"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="social-link"
-                        aria-label="LinkedIn"
-                    >
-                        <Linkedin size={32} />
-                    </a>}
+                        {<a
+                            href="https://github.com/IshKwayisi1232004"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="social-link"
+                            aria-label="Linkedin"
+                        >
+                            <Linkedin size={48} />
+                        </a>}
+                    </div>
                 </div>
 
             </div>
