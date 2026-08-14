@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap";
-import { ArrowRight } from "react-bootstrap-icons";
+import { Github, Linkedin } from "react-bootstrap-icons";
 import spyro from "../assets/SpyroPortfolio.png";
 import "./ContactPage.css";
 
@@ -7,6 +7,13 @@ export const Contact = () => {
     return (
         <section className="contact" id="contact">
             <div className="contact-content">
+
+                <img 
+                    src={spyro} 
+                    alt="Spyro" 
+                    className="spyro-image" 
+                />
+
                 <h2>
                     Contact
                 </h2>
@@ -24,9 +31,20 @@ export const Contact = () => {
                         href="https://github.com/IshKwayisi1232004"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="home-link"
+                        className="social-link"
+                        aria-label="GitHub"
                     >
-                        GitHub
+                        <Github size={32} />
+                    </a>}
+
+                    {<a
+                        href="https://github.com/IshKwayisi1232004"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="social-link"
+                        aria-label="LinkedIn"
+                    >
+                        <Linkedin size={32} />
                     </a>}
                 </div>
 
