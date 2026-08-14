@@ -1,9 +1,10 @@
 import { Container } from "react-bootstrap";
 import { ArrowRight } from "react-bootstrap-icons";
 import gameBackground from "../assets/Crown_Of_Exodus.png";
+import { Link } from "react-router-dom";
 import "./Home.css";
 
-export const Banner = () => {
+export const Home = () => {
     return (
         <section className="home" id="home" style={{ backgroundImage: `url(${gameBackground})` }}>
             <div className="home-content">
@@ -38,9 +39,9 @@ export const Banner = () => {
                         Experience
                     </a>
 
-                    <a href ="#contact" className="home-button">
-                        Contact
-                    </a>
+                    <Link to="/contact">
+                        <button>Contact</button>
+                    </Link>
 
                     {/* <a
                         href="https://github.com/IshKwayisi1232004"
