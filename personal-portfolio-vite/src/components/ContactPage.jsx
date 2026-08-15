@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap";
-import { Github, Linkedin } from "react-bootstrap-icons";
+import { Github, Linkedin, Envelope } from "react-bootstrap-icons";
 import spyro from "../assets/SpyroPortfolio.png";
 import "./ContactPage.css";
 
@@ -20,25 +20,36 @@ export const Contact = () => {
                     </h2>
 
                     <div className="contact-actions">
-                        {<a
-                            href="https://github.com/IshKwayisi1232004"
+                        <a
+                            href="mailto:spyrorocks324@gmail.com"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="social-link"
-                            aria-label="Github"
+                            className="email-button"
                         >
-                            <Github size={48} />
-                        </a>}
+                            <Envelope size={22} />
+                            <span>spyrorocks324@gmail.com</span>
+                        </a>
+                        <div className="social-actions">
+                            <a
+                                href="https://github.com/IshKwayisi1232004"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="social-link"
+                                aria-label="Github"
+                            >
+                                <Github size={48} />
+                            </a>
 
-                        {<a
-                            href="https://www.linkedin.com/in/ishmael-kwayisi/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="social-link"
-                            aria-label="Linkedin"
-                        >
-                            <Linkedin size={48} />
-                        </a>}
+                            <a
+                                href="https://www.linkedin.com/in/ishmael-kwayisi/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="social-link"
+                                aria-label="Linkedin"
+                            >
+                                <Linkedin size={48} />
+                            </a>
+                        </div>
                     </div>
                 </div>
 

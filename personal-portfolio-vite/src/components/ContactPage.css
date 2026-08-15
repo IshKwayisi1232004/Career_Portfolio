@@ -46,7 +46,7 @@
     width: auto;
     height: 400px;
     object-fit: contain;
-    margin-right: 200px;
+    margin-right: 80px;
 }
 
 .contact-info {
@@ -55,6 +55,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+
     text-align: center;
 }
 
@@ -68,17 +70,18 @@
 
 .contact-actions {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     gap: 20px;
-    margin-top: 25px;
+    margin-top: 10px;
 }
 
 .social-actions {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
-    margin-top: 25px;
 }
 
 .social-link {
@@ -102,4 +105,28 @@
 
 .social-link:hover {
     transform: scale(1.1);
+}
+
+.email-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 12px 30px;
+    margin-top: 10px;
+
+    border-radius: 8px;
+
+    background-color: #242424;
+    color: white;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: transform 0.2s ease;
+}
+
+.email-button:hover {
+    transform: scale(1.05);
 }
