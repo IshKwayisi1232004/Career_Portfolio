@@ -2,12 +2,17 @@ import { Container } from "react-bootstrap";
 import { Github, Linkedin, Envelope } from "react-bootstrap-icons";
 import spyro from "../assets/SpyroPortfolio.png";
 import "./ContactPage.css";
+import { Link } from "react-router-dom";
 
 export const Contact = () => {
     return (
         <section className="contact" id="contact">
+            <div>
+                <Link to="/" className="home-link">
+                    Ishmael Kwayisi
+                </Link>
+            </div>
             <div className="contact-content">
-
                 <img 
                     src={spyro} 
                     alt="Spyro" 

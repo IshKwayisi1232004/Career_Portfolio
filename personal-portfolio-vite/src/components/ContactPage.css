@@ -14,7 +14,24 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background: rgb(208, 0, 255);
+    background: rgb(230, 116, 255);
+}
+
+.home-link {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+
+    z-index: 2;
+}
+
+.home-link:hover {
+    color: #ddd;
 }
 
 .contact::before {
