@@ -30,10 +30,10 @@ export const Home = () => {
                     <a href ="#projects" className="home-button">
                         Projects
                     </a>
-
-                    <a href ="#skills" className="home-button">
-                        Skills
-                    </a>
+                    
+                    <Link to="/skills">
+                        <button>Skills</button>
+                    </Link>
 
                     <a href ="#experience" className="home-button">
                         Experience

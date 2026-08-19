@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Home } from "./components/Home";
 import { Contact } from "./components/Contactpage";
+import { Skills } from "./components/SkillsPage";
 // import { Footer } from "./components/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -12,6 +13,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home/>} />
+          <Route path="/skills" element={<Skills/>} />
           <Route path="/contact" element={<Contact/>} />
         </Routes>
       </BrowserRouter>
