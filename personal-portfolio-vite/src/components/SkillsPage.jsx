@@ -46,25 +46,27 @@ export const Skills = () => {
                     Ishmael Kwayisi
                 </Link>
             </div>
-            <div className="skills-header">
-                <h2>Ladies and gentlemen, I present to you my </h2>
-                <h1>Skills</h1>
+            <div className="skills-container">
+                <div className="skills-header">
+                    <h2>Ladies and gentlemen, I present to you my </h2>
+                    <h1>Skills</h1>
 
-                <p>Uncover the programming languages and frameworks I've worked to not only master, but
-                    also to leverage in crafting innovative solutions. Each skill is just as integral as the 
-                    last to powering my projects!
-                </p>
-            </div>
+                    <p>Uncover the programming languages and frameworks I've worked to not only master, but
+                        also to leverage in crafting innovative solutions. Each skill is just as integral as the 
+                        last to powering my projects!
+                    </p>
+                </div>
 
-            <div className="skills-grid">
-                {skills.map((skill, index) => (
-                    <div className="skill-card" key={index}>
-                        <div className="skill-icon">
-                            {skill.icon}
+                <div className="skills-grid">
+                    {skills.map((skill, index) => (
+                        <div className="skill-card" key={index}>
+                            <div className="skill-icon">
+                                {skill.icon}
+                            </div>
+                            <span>{skill.name}</span>
                         </div>
-                        <span>{skill.name}</span>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </section>
     );

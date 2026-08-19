@@ -12,6 +12,19 @@
   border-radius: 15px;
 }
 
+.skills-container {
+    width: 90%;
+    max-width: 1500px;
+    margin: 30px auto 0;
+    padding: 60px 50px 70px;
+
+    background-color: #9fc5bf;
+    border: 3px solid black;
+    border-radius: 15px;
+
+    box-sizing: border-box;
+}
+
 .skills-header {
   text-align: center;
   max-width: 1300px;
