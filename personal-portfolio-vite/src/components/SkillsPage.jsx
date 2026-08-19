@@ -41,7 +41,7 @@ const skills = [
 export const Skills = () => {
     return (
         <section className="skills" id="skills">
-            <div>
+            <div className="skills-name">
                 <Link to="/" className="home-link">
                     Ishmael Kwayisi
                 </Link>

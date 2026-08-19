@@ -1,6 +1,7 @@
 .skills {
   width: 100%;
   padding: 30px;
+  background: #feffff;
 }
 
 .skills-content {
@@ -18,11 +19,20 @@
     margin: 30px auto 0;
     padding: 60px 50px 70px;
 
-    background-color: #9fc5bf;
+    background-color: rgb(145, 118, 118);
     border: 3px solid black;
     border-radius: 15px;
 
     box-sizing: border-box;
+}
+
+.skills-name .home-link {
+    color: rgb(183, 43, 226);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: none;
 }
 
 .skills-header {
