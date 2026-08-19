@@ -23,9 +23,9 @@ export const Home = () => {
                 </p>
 
                 <div className="home-actions">
-                    <a href="#about" className="home-button">
-                        About
-                    </a>
+                    <Link to="/about">
+                        <button>About</button>
+                    </Link>
 
                     <a href ="#projects" className="home-button">
                         Projects
