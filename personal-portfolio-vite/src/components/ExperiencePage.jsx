@@ -5,6 +5,7 @@ import snhuLogo from "../assets/SNHU-logo.png";
 import gatechLogo from "../assets/GaTech-logo.png";
 import marketBasketLogo from "../assets/Market-Basket-Logo.png";
 import jerseyMikesLogo from "../assets/JerseyMikes-logo.png";
+import mvhsLogo from "../assets/MVHS.jpg";
 
 export const Experience = () => {
 
@@ -58,11 +59,11 @@ export const Experience = () => {
                             <div className="timeline-item">
                                 <div className="timeline-card">
                                     <div className="timeline-card-header">
-                                        <img src={snhuLogo} alt="SNHU Logo" className="timeline-logo" />
+                                        <img src={mvhsLogo} alt="MVHS Logo" className="timeline-logo" />
                                         
                                         <div> 
                                             <h2>High School Diploma</h2>
-                                            <h3>Southern New Hampshire University</h3>
+                                            <h3>Manchester Valley High School</h3>
                                         </div>
                                     </div>
 
