@@ -127,45 +127,62 @@ export const Experience = () => {
                 )}
 
                 {activeTab === "work" && (
-                    <div className="timeline">
-                        <div className="timeline-item">
-                            <div className="timeline-card">
-                                <div className="timeline-card-header">
-                                    <img src={marketBasketLogo} alt="Market Basket Logo" className="timeline-logo" />
-   
-                                    <div> 
-                                        <h2>Bagger</h2>
-                                        <h3>Market Basket</h3>
+                    <div className="timeline-container">
+                
+                        <button
+                            className="timeline-scroll-button left"
+                            onClick={() => scrollTimeline(-1)}
+                        >
+                            ←
+                        </button>
+
+                        <div className="timeline" ref={timelineRef}>
+                            <div className="timeline-item">
+                                <div className="timeline-card">
+                                    <div className="timeline-card-header">
+                                        <img src={marketBasketLogo} alt="Market Basket Logo" className="timeline-logo" />
+    
+                                        <div> 
+                                            <h2>Bagger</h2>
+                                            <h3>Market Basket</h3>
+                                        </div>
+                                    </div>
+
+                                    <div className="timeline-details">
+                                        <span>June 2023 - October 2023</span>
+                                        <span>Concord, NH</span>
+                                    </div>    
+                                </div>
+                                <div className="timeline-dot"></div>
+                            </div>
+
+                            <div className="timeline-item">
+                                <div className="timeline-card">
+                                    <div className="timeline-card-header">
+                                        <img src={jerseyMikesLogo} alt="Jersey Mike's Subs Logo" className="timeline-logo" />
+                                            
+                                        <div> 
+                                            <h2>Sandwich Maker</h2>
+                                            <h3>Jersey Mike's Subs</h3>
+                                        </div>
+                                    </div>
+
+                                    <div className="timeline-details">
+                                        <span>October 2023 - Present</span>
+                                        <span>Concord, NH</span>
                                     </div>
                                 </div>
 
-                                <div className="timeline-details">
-                                    <span>June 2023 - October 2023</span>
-                                    <span>Concord, NH</span>
-                                </div>    
+                                <div className="timeline-dot"></div>
                             </div>
-                            <div className="timeline-dot"></div>
                         </div>
-
-                        <div className="timeline-item">
-                            <div className="timeline-card">
-                                <div className="timeline-card-header">
-                                    <img src={jerseyMikesLogo} alt="Jersey Mike's Subs Logo" className="timeline-logo" />
-                                        
-                                    <div> 
-                                        <h2>Sandwich Maker</h2>
-                                        <h3>Jersey Mike's Subs</h3>
-                                    </div>
-                                </div>
-
-                                <div className="timeline-details">
-                                    <span>October 2023 - Present</span>
-                                    <span>Concord, NH</span>
-                                </div>
-                            </div>
-
-                            <div className="timeline-dot"></div>
-                        </div>
+                        <button
+                                className="timeline-scroll-button right"
+                                onClick={() => scrollTimeline(1)}
+                            >
+                                →
+                        </button>
+                        
                     </div>
                 )}
             </div>
