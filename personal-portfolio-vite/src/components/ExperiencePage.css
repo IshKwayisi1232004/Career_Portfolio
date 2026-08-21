@@ -64,16 +64,29 @@
 .timeline {
     position: relative;
 
-    width: 90%;
-    max-width: 1200px;
-
+    width: 100%;
     height: 500px;
 
-    margin: 3rem auto 0;
-
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
+
+    gap: 60px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+
+    padding: 0 20px;
+
+    box-sizing: border-box;
+
+    scrollbar-width: none;
+}
+
+.timeline::-webkit-scrollbar {
+    display: none;
 }
 
 /* Horizontal line */
@@ -83,8 +96,8 @@
 
     position: absolute;
 
-    left: 5%;
-    right: 5%;
+    left: 20px;
+    right: 20px;
     top: 50%;
 
     height: 4px;
@@ -92,6 +105,8 @@
     background-color: black;
 
     transform: translateY(-50%);
+
+    z-index: 0;
 }
 
 
@@ -100,7 +115,9 @@
 .timeline-item {
     position: relative;
 
-    width: 300px;
+    flex: 0 0 400px;
+
+    width: 400px;
     height: 100%;
 
     display: flex;
@@ -108,6 +125,54 @@
     align-items: center;
 }
 
+/* ---------------- Timeline Container ---------------- */
+.timeline-container {
+    position: relative;
+
+    width: 900px;
+    max-width: calc(100vw - 160px);
+
+    margin: 3rem auto 0;
+}
+
+.timeline-scroll-button {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 52px;
+    height: 52px;
+
+    border: 2px solid black;
+    border-radius: 50%;
+
+    background-color: #8b75f5;
+    color: white;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    box-shadow: 0 4px 0 black;
+
+    transition: transform 0.2s ease;
+}
+
+.timeline-scroll-button:hover {
+    transform: translateY(-50%) scale(1.05);
+}
+
+.timeline-scroll-button.left {
+    left: -70px;
+}
+
+.timeline-scroll-button.right {
+    right: -70px;
+}
 
 /* ---------------- Card ---------------- */
 
@@ -117,6 +182,7 @@
     bottom: calc(50% + 35px);
 
     width: 400px;
+    box-sizing: border-box;
 
     padding: 1.5rem;
 

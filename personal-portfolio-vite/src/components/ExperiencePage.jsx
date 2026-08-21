@@ -1,5 +1,5 @@
 import "./ExperiencePage.css";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import snhuLogo from "../assets/SNHU-logo.png";
 import gatechLogo from "../assets/GaTech-logo.png";
@@ -9,6 +9,16 @@ import jerseyMikesLogo from "../assets/JerseyMikes-logo.png";
 export const Experience = () => {
 
     const [activeTab, setActiveTab] = useState("education");
+    const timelineRef = useRef(null);
+
+    const scrollTimeline = (direction) => {
+        if (timelineRef.current) {
+            timelineRef.current.scrollBy({
+                left: direction * 460, // Adjust the scroll amount as needed
+                behavior: "smooth",
+            });
+        }
+    };
 
     return (
         <section className="experience" id="experience">
@@ -35,47 +45,84 @@ export const Experience = () => {
                 </div>
 
                 {activeTab === "education" && (
-                    <div className="timeline">
-                        <div className="timeline-item">
-                            <div className="timeline-card">
-                                <div className="timeline-card-header">
-                                    <img src={snhuLogo} alt="SNHU Logo" className="timeline-logo" />
-                                    
-                                    <div> 
-                                        <h2>Bachelor of Science in Computer Science</h2>
-                                        <h3>Southern New Hampshire University</h3>
-                                    </div>
-                                </div>
+                    <div className="timeline-container">
 
-                                <div className="timeline-details">
-                                    <span>2023 - 2026</span>
-                                    <span>Manchester, NH</span>
-                                    <span>GPA: 3.92</span>
-                                </div> 
-                            </div>
-                            <div className="timeline-dot"></div>
-                        </div>
+                        <button
+                            className="timeline-scroll-button left"
+                            onClick={() => scrollTimeline(-1)}
+                        >
+                            ←
+                        </button>
 
-                        
-                        <div className="timeline-item">
-                            <div className="timeline-card">
-                                <div className="timeline-card-header">
-                                    <img src={gatechLogo} alt="GA Logo" className="timeline-logo" />
+                        <div className="timeline" ref={timelineRef}>
+                            <div className="timeline-item">
+                                <div className="timeline-card">
+                                    <div className="timeline-card-header">
+                                        <img src={snhuLogo} alt="SNHU Logo" className="timeline-logo" />
                                         
-                                    <div> 
-                                        <h2>Master of Science in Computer Science</h2>
-                                        <h3>Georgia Institute of Technology</h3>
+                                        <div> 
+                                            <h2>High School Diploma</h2>
+                                            <h3>Southern New Hampshire University</h3>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div className="timeline-details">
-                                    <span>2026 - 2028</span>
-                                    <span>Online</span>
-                                    <span>GPA: N/A</span>
-                                </div>    
+                                    <div className="timeline-details">
+                                        <span>2019 - 2023</span>
+                                        <span>Penacook, NH</span>
+                                        <span>GPA: 4.19</span>
+                                    </div> 
+                                </div>
+                                <div className="timeline-dot"></div>
                             </div>
-                            <div className="timeline-dot"></div>
+
+                            <div className="timeline-item">
+                                <div className="timeline-card">
+                                    <div className="timeline-card-header">
+                                        <img src={snhuLogo} alt="SNHU Logo" className="timeline-logo" />
+                                        
+                                        <div> 
+                                            <h2>Bachelor of Science in Computer Science</h2>
+                                            <h3>Southern New Hampshire University</h3>
+                                        </div>
+                                    </div>
+
+                                    <div className="timeline-details">
+                                        <span>2023 - 2026</span>
+                                        <span>Manchester, NH</span>
+                                        <span>GPA: 3.92</span>
+                                    </div> 
+                                </div>
+                                <div className="timeline-dot"></div>
+                            </div>
+
+                            
+                            <div className="timeline-item">
+                                <div className="timeline-card">
+                                    <div className="timeline-card-header">
+                                        <img src={gatechLogo} alt="GA Logo" className="timeline-logo" />
+                                            
+                                        <div> 
+                                            <h2>Master of Science in Computer Science</h2>
+                                            <h3>Georgia Institute of Technology</h3>
+                                        </div>
+                                    </div>
+
+                                    <div className="timeline-details">
+                                        <span>2026 - 2028</span>
+                                        <span>Online</span>
+                                        <span>GPA: N/A</span>
+                                    </div>    
+                                </div>
+                                <div className="timeline-dot"></div>
+                            </div>
                         </div>
+
+                        <button
+                            className="timeline-scroll-button right"
+                            onClick={() => scrollTimeline(1)}
+                        >
+                            →
+                        </button>
                     </div>
                 )}
 
