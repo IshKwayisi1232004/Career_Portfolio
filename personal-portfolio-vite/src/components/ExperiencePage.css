@@ -1,0 +1,196 @@
+.experience {
+    min-height: 100vh;
+    padding: 2rem 4rem;
+}
+
+.experience h2 {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* ---------------- Tabs ---------------- */
+
+.experience-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.experience-tabs button {
+    padding: 0.8rem 2rem;
+
+    border: 2px solid black;
+    border-radius: 999px;
+
+    background-color: white;
+    color: black;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 0 black;
+
+    transition: all 0.2s ease;
+}
+
+.experience-tabs button:hover {
+    transform: translateY(-2px);
+}
+
+.experience-tabs button.active {
+    background-color: #8b75f5;
+    color: white;
+
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 black;
+}
+
+
+/* ---------------- Timeline ---------------- */
+
+.timeline {
+    position: relative;
+
+    width: 90%;
+    max-width: 1200px;
+
+    height: 500px;
+
+    margin: 3rem auto 0;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Horizontal line */
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 5%;
+    right: 5%;
+    top: 50%;
+
+    height: 4px;
+
+    background-color: black;
+
+    transform: translateY(-50%);
+}
+
+
+/* ---------------- Timeline Item ---------------- */
+
+.timeline-item {
+    position: relative;
+
+    width: 300px;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ---------------- Card ---------------- */
+
+.timeline-card {
+    position: absolute;
+
+    bottom: calc(50% + 35px);
+
+    width: 400px;
+
+    padding: 1.5rem;
+
+    background-color: #f8faf9;
+    color: black;
+
+    border: 2px solid black;
+    border-radius: 20px;
+
+    box-shadow: 0 7px 0 black;
+
+    z-index: 2;
+}
+
+.timeline-card h2 {
+    font-size: 1.4rem;
+    line-height: 1.2;
+
+    margin: 0 0 0.75rem;
+}
+
+.timeline-card h3 {
+    font-size: 1rem;
+
+    margin: 0;
+}
+
+
+/* ---------------- Details ---------------- */
+
+.timeline-details {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 0.5rem;
+
+    margin-top: 1rem;
+}
+
+.timeline-details span {
+    padding: 0.4rem 0.7rem;
+
+    background-color: #e8f2ec;
+
+    border-radius: 999px;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+
+/* ---------------- Dot ---------------- */
+
+.timeline-dot {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 24px;
+    height: 24px;
+
+    background-color: #8b75f5;
+
+    border: 4px solid white;
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 2;
+}
+
+.timeline-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.timeline-card-header img {
+    width: 55px;
+    height: 55px;
+
+    object-fit: contain;
+    flex-shrink: 0;
+
+    border-radius: 10px;
+}

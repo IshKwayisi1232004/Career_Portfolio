@@ -23,7 +23,7 @@ export const Home = () => {
                 </p>
 
                 <div className="home-actions">
-                    <Link to="/about">
+                    <Link to="/about" className="home-button">
                         <button>About</button>
                     </Link>
 
@@ -31,15 +31,15 @@ export const Home = () => {
                         Projects
                     </a>
                     
-                    <Link to="/skills">
+                    <Link to="/skills" className="home-button">
                         <button>Skills</button>
                     </Link>
 
-                    <a href ="#experience" className="home-button">
+                    <Link to="/experience" className="home-button">
                         Experience
-                    </a>
+                    </Link>
 
-                    <Link to="/contact">
+                    <Link to="/contact" className="home-button">
                         <button>Contact</button>
                     </Link>
 
