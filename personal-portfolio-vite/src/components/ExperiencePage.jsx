@@ -85,7 +85,7 @@ export const Experience = () => {
                             <div className="timeline-card">
                                 <div className="timeline-card-header">
                                     <img src={marketBasketLogo} alt="Market Basket Logo" className="timeline-logo" />
-                                        
+   
                                     <div> 
                                         <h2>Bagger</h2>
                                         <h3>Market Basket</h3>

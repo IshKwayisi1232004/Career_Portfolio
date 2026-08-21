@@ -1,11 +1,21 @@
 .experience {
     min-height: 100vh;
-    padding: 2rem 4rem;
+    padding: 2rem 4rem; 
+    background-color: #f8faf9;
 }
 
 .experience h2 {
     text-align: center;
     margin-top: 2rem;
+}
+
+.experience .home-link {
+    color: rgb(183, 43, 226);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: none;
 }
 
 /* ---------------- Tabs ---------------- */
