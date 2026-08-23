@@ -159,52 +159,6 @@
 }
 
 /* =========================
-   Hero
-   ========================= */
-
-.project-hero {
-    width: 100%;
-
-    max-width: 1200px;
-
-    aspect-ratio: 16 / 7;
-
-    margin: 2rem auto 4rem;
-
-    overflow: hidden;
-
-    background-color: #ddd;
-
-    border: 2px solid #000;
-
-    border-radius: 18px;
-
-    box-shadow: 6px 6px 0 #000;
-}
-
-.project-hero img {
-    display: block;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-}
-
-.project-hero-placeholder {
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    width: 100%;
-    height: 100%;
-
-    font-size: 2rem;
-    font-weight: 700;
-}
-
-/* =========================
    Project Information
    ========================= */
 
@@ -298,6 +252,105 @@
     margin: 0;
 }
 
+.project-showcase {
+    width: 90%;
+    max-width: 1400px;
+
+    margin: 2rem auto 4rem;
+
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(250px, 1fr);
+
+    gap: 1.5rem;
+
+    align-items: start;
+}
+
+/* =========================
+   Project Media
+   ========================= */
+
+.project-media {
+    width: 100%;
+}
+
+/* Featured media */
+
+.project-featured-media {
+    width: 100%;
+    overflow: hidden;
+    background-color: #f8faf9;
+    border: 2px solid #000;
+    border-radius: 18px;
+    box-shadow: 6px 6px 0 #000;
+}
+
+.project-featured-media img,
+.project-featured-media video {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Thumbnails */
+
+.project-media-thumbnails {
+    display: flex;
+
+    gap: 0.75rem;
+
+    margin-top: 1rem;
+
+    overflow-x: auto;
+
+    padding-bottom: 0.5rem;
+}
+
+.media-thumbnail {
+    flex: 0 0 140px;
+
+    height: 80px;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    background-color: #111;
+
+    border: 2px solid #000;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    box-shadow: 2px 2px 0 #000;
+
+    opacity: 0.65;
+
+    transition:
+        opacity 0.15s ease,
+        transform 0.15s ease;
+}
+
+.media-thumbnail:hover {
+    opacity: 1;
+
+    transform: translateY(-2px);
+}
+
+.media-thumbnail.active {
+    opacity: 1;
+
+    border: 3px solid rgb(183, 43, 226);
+}
+
+.media-thumbnail img,
+.media-thumbnail video {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
 /* =========================
    Responsive
    ========================= */
@@ -312,7 +365,7 @@
         font-size: 2.2rem;
     }
 
-    .project-info {
+    .project-showcase {
         grid-template-columns: 1fr;
     }
 

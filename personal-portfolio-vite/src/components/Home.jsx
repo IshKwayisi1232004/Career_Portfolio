@@ -1,12 +1,27 @@
+import { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 import { ArrowRight } from "react-bootstrap-icons";
-import gameBackground from "../assets/Crown_Of_Exodus.png";
+import { projects } from "../data/projects";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
 export const Home = () => {
+        const [currentProject, setCurrentProject] = useState(0);
+
+        useEffect(() => {
+            const interval = setInterval(() => {
+                setCurrentProject((previous) =>
+                    (previous + 1) % projects.length
+                );
+            }, 5000);
+
+            return () => clearInterval(interval);
+        }, []);
+
+        const backgroundImage = projects[currentProject]?.image;
+
     return (
-        <section className="home" id="home" style={{ backgroundImage: `url(${gameBackground})` }}>
+        <section className="home" id="home" style={{ backgroundImage: `url(${backgroundImage})` }}>
             <div className="home-content">
 
                 <p className="home-eyebrow">

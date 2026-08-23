@@ -4,12 +4,20 @@ import roamieImage from "../assets/RoamieThumbnail.png";
 import researchImage from "../assets/ResearchThumbnail.png";
 import aniverseImage from "../assets/AniVerse.png";
 import chessPal from "../assets/ChessPal.png";
+
+//Project Not Zelda Imports
 import notZelda from "../assets/ProjectNotZelda.png";
+import notZeldaScreenshot1 from "../assets/Project-Not-Zelda/Project-Not-Zelda-Screenshot1.png";
+import notZeldaScreenshot2 from "../assets/Project-Not-Zelda/Project-Not-Zelda-Screenshot2.png";
+import notZeldaArrowVideo from "../assets/Project-Not-Zelda/Project-Not-Zelda-Arrow-Combat.mp4";
+
+
 import compGraphics from "../assets/CompGraphics.png";
 import cryptRaider from "../assets/CryptRaider.png"
 import animalHeroes from "../assets/AnimalHeroes.png";
 import waterLevel from "../assets/WaterLevelDetection.png";
 import eventApp from "../assets/EventTracker.png";
+
 
 export const projects = [
     {
@@ -32,8 +40,18 @@ export const projects = [
         github: "https://github.com/IshKwayisi1232004/Dragon-Locomotion-Prototype",
 
         type: "Game Development",
+        role: "Software Engineer",
+        timeframe: "July 2026 - Present",
         development: "Solo",
-        status: "In Progress",
+        status: "In Development",
+
+        media: [
+            {
+                type: "image",
+                src: soarDragonLocomotionImage,
+                alt: "Hero image"
+            }
+        ],
 
         sections: {
             project: "...",
@@ -208,32 +226,63 @@ export const projects = [
     {
         id: "projectNotZelda",
         title: "Project Not Zelda",
-        subtitle: "--------------",
+        subtitle: "P.S. This is definitely not a Zelda clone",
         description:
-            "An Unreal Engine 5 gameplay programming prototype exploring momentum-based dragon movement, flight, diving, and aerial control.",
+            "An Unity gameplay programming prototype demonstrating level design, game systems and game A.I.",
         category: "Game Development",
 
         image: notZelda,
 
         technologies: [
-            "Unreal Engine 5",
-            "C++",
-            "Git",
+            "Unity",
+            "C#",
+            "GitHub",
+            "Visual Studio", 
+            "Aesprite",
+            "Pixlr"
         ],
 
         demo: "https://your-demo-url.com",
         github: "https://github.com/IshKwayisi1232004/Project-Not-Zelda-it145",
 
         type: "Game Development",
+        role: "Lead Game Designer and Programmer",
+        timeframe: "Jan. 2024 - Apr. 2024",
         development: "4-Person Team",
-        status: "In Progress",
+        status: "Finished",
+
+        media: [
+        {
+            type: "image",
+            src: notZelda,
+            alt: "Hero image"
+        },
+        {
+            type: "image",
+            src: notZeldaScreenshot1,
+            alt: "Pause menu"
+        },
+        {
+            type: "image",
+            src: notZeldaScreenshot2,
+            alt: "Player sword attack"
+        },
+        {
+            type: "video",
+            src: notZeldaArrowVideo,
+            alt: "Player shooting arrows in dungeon room"
+        }
+    ],
 
         sections: {
-            project: "...",
+            project: "Projct Not Zelda is a 2D Action-Adventure game that explores 2D game development design and implementation. ",
             problem: "...",
             implementation: "...",
             challenges: "...",
-            learned: "..."
+            learned: 
+            ["Prior to this project, I had mild experience working with GitHub in the past. However, upon completing this project I became more familar with how to setup, use, and collaborate on a repository in GitHub.",
+                "I learned how to use C# to make 4 player states, basic enemy A.I., item collection, and 3 game states (active, paused, game over)."
+            ]
         }
     },
     {

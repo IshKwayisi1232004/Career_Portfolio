@@ -1,4 +1,5 @@
 import "./ProjectDetails.css";
+import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { projects } from "../data/projects";
 
@@ -8,6 +9,8 @@ export const ProjectDetails = () => {
     const project = projects.find(
         (project) => project.id === projectId
     );
+
+    const [selectedMedia, setSelectedMedia] = useState(0);
 
     if(!project){
         return (
@@ -84,27 +87,98 @@ export const ProjectDetails = () => {
 
             </section>
 
-            {/* Hero / Main Media */}
-            <section className="project-hero">
-                {project.image ? (
-                    <img 
-                        src={project.image}
-                        alt={project.title}
-                    />
-                ) : (
-                    <div className="project-hero-placeholder">
-                        {project.title}
+            {/* Project Showcase */}
+            <section className="project-showcase">
+
+                {/* Project Media */}
+                <div className="project-media">
+
+                    {/* Featured Media */}
+                    <div className="project-featured-media">
+
+                        {project.media[selectedMedia].type === "image" ? (
+                            <img
+                                src={project.media[selectedMedia].src}
+                                alt={project.media[selectedMedia].alt}
+                            />
+                        ) : (
+                            <video
+                                controls
+                                src={project.media[selectedMedia].src}
+                            />
+                        )}
+
                     </div>
-                )}
+
+                    {/* Thumbnails */}
+                    <div className="project-media-thumbnails">
+
+                        {project.media.map((media, index) => (
+                            <button
+                                key={index}
+                                className={
+                                    selectedMedia === index
+                                        ? "media-thumbnail active"
+                                        : "media-thumbnail"
+                                }
+                                onClick={() => setSelectedMedia(index)}
+                            >
+                                {media.type === "image" ? (
+                                    <img
+                                        src={media.src}
+                                        alt={media.alt}
+                                    />
+                                ) : (
+                                    <video
+                                        src={media.src}
+                                        muted
+                                    />
+                                )}
+                            </button>
+                        ))}
+
+                    </div>
+
+                </div>
+
+                {/* Sidebar */}
+                <aside className="project-sidebar">
+
+                    <div>
+                        <h3>Project Type</h3>
+                        <p>{project.type}</p>
+                    </div>
+
+                    <div>
+                        <h3>Role</h3>
+                        <p>{project.role}</p>
+                    </div>
+
+                    <div>
+                        <h3>Time Frame</h3>
+                        <p>{project.timeframe}</p>
+                    </div>
+
+                    <div>
+                        <h3>Development</h3>
+                        <p>{project.development}</p>
+                    </div>
+
+                    <div>
+                        <h3>Status</h3>
+                        <p>{project.status}</p>
+                    </div>
+
+                </aside>
 
             </section>
 
-            {/* Project Information */}
+
             <section className="project-info">
-                
+
                 <div className="project-main-content">
 
-                    <ProjectSection 
+                    <ProjectSection
                         title="The Project"
                         content={project.sections.project}
                     />
@@ -114,7 +188,7 @@ export const ProjectDetails = () => {
                         content={project.sections.problem}
                     />
 
-                    <ProjectSection 
+                    <ProjectSection
                         title="Technical Implementation"
                         content={project.sections.implementation}
                     />
@@ -131,41 +205,30 @@ export const ProjectDetails = () => {
 
                 </div>
 
-                {/* Project Sidebar */}
-                <aside className="project-sidebar">
-
-                    <div>
-                        <h3>Project Type</h3>
-                        <p>{project.type}</p>
-                    </div>
-
-                    <div>
-                        <h3>Development</h3>
-                        <p>{project.development}</p>
-                    </div>
-
-                    <div>
-                        <h3>Status</h3>
-                        <p>{project.status}</p>
-                    </div>
-
-                </aside>
             </section>
 
         </main>
     );
 };
 
-const ProjectSection = ({title, content }) => {
+const ProjectSection = ({ title, content }) => {
+    const paragraphs = Array.isArray(content)
+        ? content
+        : [content];
+
     return (
         <section className="project-section">
 
             <h2>{title}</h2>
 
             <div className="project-section-content">
-                {content}
+                {paragraphs.map((paragraph, index) => (
+                    <p key={index}>
+                        {paragraph}
+                    </p>
+                ))}
             </div>
 
-        </section>    
+        </section>
     );
 };
