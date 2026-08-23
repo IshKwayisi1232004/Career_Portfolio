@@ -7,7 +7,7 @@ import { Contact } from "./components/Contactpage";
 import { Skills } from "./components/SkillsPage";
 import { Experience } from "./components/ExperiencePage";
 import { Projects } from "./components/ProjectsPage";
-//import { ProjectDetails } from "./components/ProjectDetails";
+import { ProjectDetails } from "./components/ProjectDetails";
 // import { Footer } from "./components/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -19,6 +19,7 @@ function App() {
           <Route path="/" element={<Home/>} />
           <Route path="/about" element={<About/>} />
           <Route path="/projects" element={<Projects/>} />
+          <Route path="/projects/:projectId" element={<ProjectDetails/>} />
           <Route path="/skills" element={<Skills/>} />
           <Route path="/experience" element={<Experience/>} />
           <Route path="/contact" element={<Contact/>} />
