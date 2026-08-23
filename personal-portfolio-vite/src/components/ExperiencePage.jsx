@@ -163,7 +163,7 @@ export const Experience = () => {
                                         <img src={jerseyMikesLogo} alt="Jersey Mike's Subs Logo" className="timeline-logo" />
                                             
                                         <div> 
-                                            <h2>Sandwich Maker</h2>
+                                            <h2>Crew Member</h2>
                                             <h3>Jersey Mike's Subs</h3>
                                         </div>
                                     </div>

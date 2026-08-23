@@ -27,9 +27,9 @@ export const Home = () => {
                         <button>About</button>
                     </Link>
 
-                    <a href ="#projects" className="home-button">
-                        Projects
-                    </a>
+                    <Link to="/projects" className="home-button">
+                        <button>Projects</button>
+                    </Link>
                     
                     <Link to="/skills" className="home-button">
                         <button>Skills</button>
