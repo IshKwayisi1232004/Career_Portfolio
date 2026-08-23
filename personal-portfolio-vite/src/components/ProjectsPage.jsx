@@ -33,9 +33,9 @@ export const Projects = () => {
                 </div>
 
                 <h1>
-                    Presenting to you
+                    Presenting to you, my
                     <br />
-                    <span>Projects</span>
+                    <span><b>Projects</b></span>
                 </h1>
             </section>
             <section className="project-filters">
