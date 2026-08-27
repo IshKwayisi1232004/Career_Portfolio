@@ -22,56 +22,58 @@ export const Home = () => {
         const backgroundImage = projects[currentProject]?.image;
 
     return (
-        <section className="home" id="home" style={{ backgroundImage: `url(${backgroundImage})` }}>
-            <div className="home-content">
+        <div className="home-page">
+            <main className="home" id="home" style={{ backgroundImage: `url(${backgroundImage})` }}>
+                <div className="home-content">
 
-                <p className="home-eyebrow">
-                    SOFTWARE ENGINEER
-                </p>
+                    <p className="home-eyebrow">
+                        SOFTWARE ENGINEER
+                    </p>
 
-                <h4>
-                    Hi, I'm Ishmael Kwayisi.
-                </h4>
+                    <h4>
+                        Hi, I'm Ishmael Kwayisi.
+                    </h4>
 
-                <p className="home-description">
-                    I build software and interactive systems with a
-                    focus on solving interesting problems.
-                </p>
+                    <p className="home-description">
+                        I build software and interactive systems with a
+                        focus on solving interesting problems.
+                    </p>
 
-                <div className="home-actions">
-                    <Link to="/about" className="home-button">
-                        <button>About</button>
-                    </Link>
+                    <div className="home-actions">
+                        <Link to="/about" className="home-button">
+                            <button>About</button>
+                        </Link>
 
-                    <Link to="/projects" className="home-button">
-                        <button>Projects</button>
-                    </Link>
-                    
-                    <Link to="/skills" className="home-button">
-                        <button>Skills</button>
-                    </Link>
+                        <Link to="/projects" className="home-button">
+                            <button>Projects</button>
+                        </Link>
+                        
+                        <Link to="/skills" className="home-button">
+                            <button>Skills</button>
+                        </Link>
 
-                    <Link to="/experience" className="home-button">
-                        Experience
-                    </Link>
+                        <Link to="/experience" className="home-button">
+                            Experience
+                        </Link>
 
-                    <Link to="/contact" className="home-button">
-                        <button>Contact</button>
-                    </Link>
+                        <Link to="/contact" className="home-button">
+                            <button>Contact</button>
+                        </Link>
 
-                    {/* <a
-                        href="https://github.com/IshKwayisi1232004"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="home-link"
-                    >
-                        GitHub
-                    </a> */}
+                        {/* <a
+                            href="https://github.com/IshKwayisi1232004"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="home-link"
+                        >
+                            GitHub
+                        </a> */}
+                    </div>
+
                 </div>
-
-            </div>
+            </main>
 
             <Footer />
-        </section>
+        </div>
     );
 };

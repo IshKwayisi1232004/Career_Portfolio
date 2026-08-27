@@ -6,11 +6,11 @@ export const Footer = () => {
         <footer className="portfolio-footer">
             <div className="footer-content">
 
-                <p>© 2026 John McAdams. All rights reserved.</p>
+                <p>© 2026 Ishmael Kwayisi. All rights reserved.</p>
 
                 <div className="footer-links">
                     <a
-                        href="https://github.com/xxxxxxxxxxxx"
+                        href="https://github.com/IshKwayisi1232004"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="GitHub"
@@ -19,7 +19,7 @@ export const Footer = () => {
                     </a>
 
                     <a
-                        href="https://www.linkedin.com/in/xxxxxxxx/"
+                        href="https://www.linkedin.com/in/ishmael-kwayisi/"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="LinkedIn"
@@ -28,7 +28,7 @@ export const Footer = () => {
                     </a>
 
                     <a
-                        href="mailto:xxxxxxxx@gmail.com"
+                        href="mailto:spyrorocks324@gmail.com"
                         aria-label="Email"
                     >
                         <Envelope />

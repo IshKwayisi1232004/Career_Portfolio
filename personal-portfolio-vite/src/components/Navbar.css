@@ -1,6 +1,6 @@
 .navbar {
     width: 100%;
-    padding: 1.25rem 4rem;
+    padding: 1.25rem 3.5rem;
 
     display: flex;
     align-items: center;
@@ -21,7 +21,7 @@
     letter-spacing: 0.08em;
 }
 
-.navbar-name a:hover{
+.navbar-name a:hover {
     color: rgb(196, 100, 225);
 }
 
@@ -42,5 +42,5 @@
 }
 
 .navbar-links a:hover {
-    color: rgb(196, 100, 225)
+    color: rgb(196, 100, 225);
 }
