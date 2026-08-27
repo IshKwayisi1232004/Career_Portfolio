@@ -7,6 +7,9 @@ import {SiHtml5 , SiCss, SiJavascript, SiTypescript, SiCplusplus,
 import { FaJava } from "react-icons/fa";
 import { PiFileCSharp } from "react-icons/pi";
 import { Link } from "react-router-dom";
+import { Navbar } from "../components/Navbar";
+import { Footer } from "../components/Footer";
+
 
 const skills = [
     { name: "HTML", icon: <SiHtml5 /> },
@@ -40,34 +43,38 @@ const skills = [
 
 export const Skills = () => {
     return (
-        <section className="skills" id="skills">
-            <div className="skills-name">
-                <Link to="/" className="home-link">
-                    Ishmael Kwayisi
-                </Link>
-            </div>
-            <div className="skills-container">
-                <div className="skills-header">
-                    <h2>Ladies and gentlemen, I present to you my </h2>
-                    <h1>Skills</h1>
+        <div className="skills-page">
+            <Navbar />
 
-                    <p>Uncover the programming languages and frameworks I've worked to not only master, but
-                        also to leverage in crafting innovative solutions. Each skill is just as integral as the 
-                        last to powering my projects!
-                    </p>
-                </div>
+            <main className="skills">
+                
+                <div className="skills-container">
+                    <div className="skills-header">
+                        <h2>Ladies and gentlemen, I present to you my </h2>
+                        <h1>Skills</h1>
 
-                <div className="skills-grid">
-                    {skills.map((skill, index) => (
-                        <div className="skill-card" key={index}>
-                            <div className="skill-icon">
-                                {skill.icon}
+                        <p>Uncover the programming languages and frameworks I've worked to not only master, but
+                            also to leverage in crafting innovative solutions. Each skill is just as integral as the 
+                            last to powering my projects!
+                        </p>
+                    </div>
+
+                    <div className="skills-grid">
+                        {skills.map((skill, index) => (
+                            <div className="skill-card" key={index}>
+                                <div className="skill-icon">
+                                    {skill.icon}
+                                </div>
+                                <span>{skill.name}</span>
                             </div>
-                            <span>{skill.name}</span>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
+
+                    
                 </div>
-            </div>
-        </section>
+            </main>
+
+            <Footer />
+        </div>
     );
 };

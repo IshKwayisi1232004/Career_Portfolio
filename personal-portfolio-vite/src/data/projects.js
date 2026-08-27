@@ -1,4 +1,13 @@
+// Crown of Exodus Imports
 import crownOfExodusImage from "../assets/CrownofExodus_Thumbnail.png";
+import crownOfExodus from "../assets/CrownOfExodus/Crown_Of_Exodus_Title.png";
+import crownOfExodusScreenshot1 from "../assets/CrownOfExodus/Crown_Of_Exodus_1.png";
+import crownOfExodusScreenshot2 from "../assets/CrownOfExodus/Crown_Of_Exodus_2.png";
+import crownOfExodusScreenshot3 from "../assets/CrownOfExodus/Crown_Of_Exodus_3.png";
+import crownOfExodusIntro from "../assets/CrownOfExodus/Blue_Kingdom_Boss_Demo.mp4";
+import crownOfExodusBoss from "../assets/CrownOfExodus/Intro_Cutscene.mp4";
+
+
 import soarDragonLocomotionImage from "../assets/Soar_Thumbnail.png";
 import roamieImage from "../assets/RoamieThumbnail.png";
 import researchImage from "../assets/ResearchThumbnail.png";
@@ -98,7 +107,7 @@ export const projects = [
     {
         id: "roamie",
         title: "Roamie",
-        subtitle: "--------------",
+        subtitle: "Roam Together",
         description:
             "Roamie is a web based game where players connect with their local area and each other by turning nearby places into interactive item drops, allowing players to collect and trade personalized collectibles for their animal avatar through real-world exploration.",
         category: "Web Development",
@@ -106,20 +115,34 @@ export const projects = [
         image: roamieImage,
 
         technologies: [
-            "Next.js 14",
             "React 18",
-            "TypeScript",
+            "Vite",
+            "Node.js v18",
+            "React Leaflet",
+            "JavaScript",
             "Tailwind CSS",
-            "OpenAI",
-            "Firebase Auth"
+            "PostgreSQL",
+            "Docker",
+            "Notion",
+            "Capcitator"
         ],
 
         demo: "https://your-demo-url.com",
         github: "https://github.com/Paymvi/Capstone_Project",
 
         type: "Web Application",
+        role: "Project Manager and Backend Developer",
+        timeframe: "Jan. 2026 - Present",
         development: "3-Person Team",
-        status: "In Progress",
+        status: "In Development",
+
+        media: [
+            {
+                type: "image",
+                src: roamieImage,
+                alt: "Hero image"
+            }
+        ],
 
         sections: {
             project: "...",
@@ -163,33 +186,66 @@ export const projects = [
     {
         id: "crownOfExodus",
         title: "Crown of Exodus",
-        subtitle: "--------------",
-        description:
-            "2D RPG Game",
+        subtitle: "Become the hero and save the world",
+        description: "2D RPG Game",
         category: "Game Development",
 
-        image: crownOfExodusImage,
+        image: crownOfExodus,
 
         technologies: [
             "C#",
             "Unity",
-            "GitHub",
-            "CapCut"
+            "GitHub"
         ],
 
         demo: "https://your-demo-url.com",
         github: "https://github.com/aqhoang2005/CS250SprintsProject",
 
         type: "Game Development",
+        role: "Lead Game Programmer and Scrum Master",
+        timeframe: "Aug. 2024 - Dec. 2024",
         development: "5-Person Team",
         status: "Completed",
+
+        media: [
+            {
+                type: "image",
+                src: crownOfExodus,
+                alt: "Hero image"
+            },
+            {
+                type: "image",
+                src: crownOfExodusScreenshot1,
+                alt: "Hero image"
+            },
+            {
+                type: "image",
+                src: crownOfExodusScreenshot2,
+                alt: "Hero image"
+            },
+            {
+                type: "image",
+                src: crownOfExodusScreenshot3,
+                alt: "Hero image"
+            },
+            {
+                type: "video",
+                src: crownOfExodusBoss,
+                alt: "Hero image"
+            },
+            {
+                type: "video",
+                src: crownOfExodusIntro,
+                alt: "Hero image"
+            }
+        ],
 
         sections: {
             project: "...",
             problem: "...",
             implementation: "...",
             challenges: "...",
-            learned: "..."
+            learned: "At the moment, we have no plans to continue the project. And speaking for myself, I want to focus more 3D game development, as 3D games have always been more of my playground. As I (admittedly) find I'm not a fan of lot 2D games; I only like a select few. However, if I'm asked by employers, friends or whom ever to ake a 3D game... I'm open to collaborating because I love video games and I want to make the best kind of games in any persepctive, genre, etc. I'm alwaus willing to take up a challenge when the opportunity presents itself!"
         }
     },
     {
@@ -275,13 +331,19 @@ export const projects = [
     ],
 
         sections: {
-            project: "Projct Not Zelda is a 2D Action-Adventure game that explores 2D game development design and implementation. ",
-            problem: "...",
-            implementation: "...",
-            challenges: "...",
+            project: "Projct Not Zelda is a 2D Action-Adventure game that explores 2D game development design and implementation. The narrative follows the adventurer, Chet, as he traverses through a dungeon, battling various monsters. Help Chet battle his way through challenges save his land with the legendary artifact, The Orb of Power.",
+            problem: "Project Not Zelda focused on ",
+            implementation: [
+                "Unity as a gateway and not a limitation. ",
+                "C# "
+
+            ],
+            challenges: [
+                "One of the biggest challeneges during development was managing GitHub. The use of GitHub was either new to a lot of us or experience was very minimal. This caused a lot of confusion surrounding commits, add/deleted assets and various conflicts in the source files. To mitigate the issues, we communicated more often about the changes being made before committing and pushing to the repository. After this experience, I learned about meticulous commmunication with team members. And I also learned that there are cleaner ways of handling a project repository, as I would later learn how to use Git.",
+                "As the lead programmer, I was in charge of programming and directing the various systems for our game. This was only my second time using Unity and C#, but it was my first time trying to teach it to others and in a 2D environment. To direct and teach my teammates, I used class time as an opportunity to discuss the inner workings of Unity and how to program in C#; while also leaving notes and comments within lines in the script. Additionally, to improve my scripting abilities, I looked into a lot of documentation on the official Unity page and designed multiple algorithms around the 2D vector. Overall, I learned how to adapt to being in a leadership role and exercised my problem solving skills in an unfamilar project environment."
+            ],
             learned: 
-            ["Prior to this project, I had mild experience working with GitHub in the past. However, upon completing this project I became more familar with how to setup, use, and collaborate on a repository in GitHub.",
-                "I learned how to use C# to make 4 player states, basic enemy A.I., item collection, and 3 game states (active, paused, game over)."
+            ["At the moment, there are no plans among me and my team members to revist the the project. However, a few team members and I have expressed working together again on a 2D game with the lessons learned from this project.",
             ]
         }
     },

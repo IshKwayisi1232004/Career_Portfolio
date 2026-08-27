@@ -4,6 +4,7 @@ import { ArrowRight } from "react-bootstrap-icons";
 import { projects } from "../data/projects";
 import { Link } from "react-router-dom";
 import "./Home.css";
+import { Footer } from "../components/Footer";
 
 export const Home = () => {
         const [currentProject, setCurrentProject] = useState(0);
@@ -69,6 +70,8 @@ export const Home = () => {
                 </div>
 
             </div>
+
+            <Footer />
         </section>
     );
 };

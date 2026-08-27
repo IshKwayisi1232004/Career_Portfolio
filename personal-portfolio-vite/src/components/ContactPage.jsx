@@ -3,62 +3,69 @@ import { Github, Linkedin, Envelope } from "react-bootstrap-icons";
 import spyro from "../assets/SpyroPortfolio.png";
 import "./ContactPage.css";
 import { Link } from "react-router-dom";
+import { Navbar } from "../components/Navbar";
+import { Footer } from "../components/Footer";
 
 export const Contact = () => {
     return (
-        <section className="contact" id="contact">
-            <div>
-                <Link to="/" className="home-link">
-                    Ishmael Kwayisi
-                </Link>
-            </div>
-            <div className="contact-content">
-                <img 
-                    src={spyro} 
-                    alt="Spyro" 
-                    className="spyro-image" 
-                />
+        <div className="contact-page">
 
-                <div className="contact-info">
-                    <h2>
-                        Contact
-                    </h2>
+            <Navbar />
 
-                    <div className="contact-actions">
-                        <a
-                            href="mailto:spyrorocks324@gmail.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="email-button"
-                        >
-                            <Envelope size={22} />
-                            <span>spyrorocks324@gmail.com</span>
-                        </a>
-                        <div className="social-actions">
+            <main className="contact">
+                <div className="contact-content">
+
+                    <img
+                        src={spyro}
+                        alt="Spyro"
+                        className="spyro-image"
+                    />
+
+                    <div className="contact-info">
+                        <h2>
+                            Contact
+                        </h2>
+
+                        <div className="contact-actions">
                             <a
-                                href="https://github.com/IshKwayisi1232004"
+                                href="mailto:spyrorocks324@gmail.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="social-link"
-                                aria-label="Github"
+                                className="email-button"
                             >
-                                <Github size={48} />
+                                <Envelope size={22} />
+                                <span>spyrorocks324@gmail.com</span>
                             </a>
 
-                            <a
-                                href="https://www.linkedin.com/in/ishmael-kwayisi/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="social-link"
-                                aria-label="Linkedin"
-                            >
-                                <Linkedin size={48} />
-                            </a>
+                            <div className="social-actions">
+                                <a
+                                    href="https://github.com/IshKwayisi1232004"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="social-link"
+                                    aria-label="Github"
+                                >
+                                    <Github size={48} />
+                                </a>
+
+                                <a
+                                    href="https://www.linkedin.com/in/ishmael-kwayisi/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="social-link"
+                                    aria-label="Linkedin"
+                                >
+                                    <Linkedin size={48} />
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-            </div>
-        </section>
+                </div>
+            </main>
+
+            <Footer />
+
+        </div>
     );
 };

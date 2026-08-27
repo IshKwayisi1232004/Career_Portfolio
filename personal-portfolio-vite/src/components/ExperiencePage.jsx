@@ -6,6 +6,8 @@ import gatechLogo from "../assets/GaTech-logo.png";
 import marketBasketLogo from "../assets/Market-Basket-Logo.png";
 import jerseyMikesLogo from "../assets/JerseyMikes-logo.png";
 import mvhsLogo from "../assets/MVHS.jpg";
+import { Navbar } from "../components/Navbar";
+import { Footer } from "../components/Footer";
 
 export const Experience = () => {
 
@@ -24,9 +26,9 @@ export const Experience = () => {
     return (
         <section className="experience" id="experience">
             <div>
-                <Link to="/" className="home-link">
-                    Ishmael Kwayisi
-                </Link>
+
+                <navbar />
+                
 
                 <h2>Experience</h2>
 
@@ -187,6 +189,7 @@ export const Experience = () => {
                     </div>
                 )}
             </div>
+            <Footer />
         </section>
     );
 };
