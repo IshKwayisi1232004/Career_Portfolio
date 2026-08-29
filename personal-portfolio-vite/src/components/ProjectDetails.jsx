@@ -189,9 +189,9 @@ export const ProjectDetails = () => {
                             content={project.sections.project}
                         />
 
-                        <ProjectSection
-                            title="The Problem"
-                            content={project.sections.problem}
+                        <ProjectDesignSection
+                            title="Design and Development"
+                            content={project.sections.designAndDevelopment}
                         />
 
                         <ProjectSection
@@ -236,6 +236,40 @@ const ProjectSection = ({ title, content }) => {
                     </p>
                 ))}
             </div>
+
+        </section>
+    );
+};
+
+const ProjectDesignSection = ({ title, content }) => {
+    return (
+        <section className="project-section">
+
+            <h2>{title}</h2>
+
+            {content.introduction.map((paragraph, index) => (
+                <p key={index}>
+                    {paragraph}
+                </p>
+            ))}
+
+            <h3>Gameplay Systems</h3>
+
+            <ul>
+                {content.gameplaySystems.map((system, index) => (
+                    <li key={index}>
+                        <strong>{system.name}</strong> — {system.description}
+                    </li>
+                ))}
+            </ul>
+
+            <h3>Level Design</h3>
+
+            {content.levelDesign.map((paragraph, index) => (
+                <p key={index}>
+                    {paragraph}
+                </p>
+            ))}
 
         </section>
     );
