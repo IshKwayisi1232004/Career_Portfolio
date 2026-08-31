@@ -1,7 +1,7 @@
 import "./AboutPage.css";
 import profile from "../assets/AboutMe.jpeg";
 import { Link } from "react-router-dom";
-import { Navbar } from "../components/Navbar";
+import { Navbar } from "../components/NavBar";
 import { Footer } from "../components/Footer";
 
 export const About = () => {

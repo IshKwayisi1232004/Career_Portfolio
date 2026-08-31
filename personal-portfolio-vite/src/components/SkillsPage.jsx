@@ -7,7 +7,7 @@ import {SiHtml5 , SiCss, SiJavascript, SiTypescript, SiCplusplus,
 import { FaJava } from "react-icons/fa";
 import { PiFileCSharp } from "react-icons/pi";
 import { Link } from "react-router-dom";
-import { Navbar } from "../components/Navbar";
+import { Navbar } from "../components/NavBar";
 import { Footer } from "../components/Footer";
 
 

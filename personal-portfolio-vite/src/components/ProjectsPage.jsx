@@ -2,7 +2,7 @@ import {useState} from "react";
 import { Link } from "react-router-dom";
 import "./ProjectsPage.css";
 import { projects } from "../data/projects";
-import { Navbar } from "../components/Navbar";
+import { Navbar } from "../components/NavBar";
 import { Footer } from "../components/Footer";
 
 export const Projects = () => {

@@ -6,7 +6,7 @@ import gatechLogo from "../assets/GaTech-logo.png";
 import marketBasketLogo from "../assets/Market-Basket-Logo.png";
 import jerseyMikesLogo from "../assets/JerseyMikes-logo.png";
 import mvhsLogo from "../assets/MVHS.jpg";
-import { Navbar } from "../components/Navbar";
+import { Navbar } from "../components/NavBar";
 import { Footer } from "../components/Footer";
 
 export const Experience = () => {

@@ -3,7 +3,7 @@ import { Github, Linkedin, Envelope } from "react-bootstrap-icons";
 import spyro from "../assets/SpyroPortfolio.png";
 import "./ContactPage.css";
 import { Link } from "react-router-dom";
-import { Navbar } from "../components/Navbar";
+import { Navbar } from "../components/NavBar";
 import { Footer } from "../components/Footer";
 
 export const Contact = () => {
