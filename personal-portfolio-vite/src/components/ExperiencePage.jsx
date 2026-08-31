@@ -1,7 +1,7 @@
 import "./ExperiencePage.css";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import snhuLogo from "../assets/SNHU-logo.png";
+import snhuLogo from "../assets/SNHU-Logo.png";
 import gatechLogo from "../assets/GaTech-logo.png";
 import marketBasketLogo from "../assets/Market-Basket-Logo.png";
 import jerseyMikesLogo from "../assets/JerseyMikes-logo.png";
