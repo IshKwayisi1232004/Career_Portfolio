@@ -59,15 +59,6 @@ export const Home = () => {
                         <Link to="/contact" className="home-button">
                             <button>Contact</button>
                         </Link>
-
-                        {/* <a
-                            href="https://github.com/IshKwayisi1232004"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="home-link"
-                        >
-                            GitHub
-                        </a> */}
                     </div>
 
                 </div>
