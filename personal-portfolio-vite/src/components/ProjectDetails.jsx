@@ -206,7 +206,7 @@ export const ProjectDetails = () => {
 
                         <ProjectSection
                             title="Future Project Plans"
-                            content={project.sections.learned}
+                            content={project.sections.future}
                         />
 
                     </div>
@@ -247,29 +247,54 @@ const ProjectDesignSection = ({ title, content }) => {
 
             <h2>{title}</h2>
 
+            {/* Introduction */}
             {content.introduction.map((paragraph, index) => (
                 <p key={index}>
                     {paragraph}
                 </p>
             ))}
 
-            <h3>Gameplay Systems</h3>
+            {/* Gameplay Systems */}
+            {content.gameplaySystems && (
+                <>
+                    <h3>Gameplay Systems</h3>
 
-            <ul>
-                {content.gameplaySystems.map((system, index) => (
-                    <li key={index}>
-                        <strong>{system.name}</strong> — {system.description}
-                    </li>
-                ))}
-            </ul>
+                    <ul>
+                        {content.gameplaySystems.map((system, index) => (
+                            <li key={index}>
+                                <strong>{system.name}</strong> —{" "}
+                                {system.description}
+                            </li>
+                        ))}
+                    </ul>
+                </>
+            )}
 
-            <h3>Level Design</h3>
+            {/* Level Design */}
+            {content.levelDesign && (
+                <>
+                    <h3>Level Design</h3>
 
-            {content.levelDesign.map((paragraph, index) => (
-                <p key={index}>
-                    {paragraph}
-                </p>
-            ))}
+                    {content.levelDesign.map((paragraph, index) => (
+                        <p key={index}>
+                            {paragraph}
+                        </p>
+                    ))}
+                </>
+            )}
+
+            {/* Scrum Master */}
+            {content.scrumMaster && (
+                <>
+                    <h3>Scrum Master</h3>
+
+                    {content.scrumMaster.map((paragraph, index) => (
+                        <p key={index}>
+                            {paragraph}
+                        </p>
+                    ))}
+                </>
+            )}
 
         </section>
     );

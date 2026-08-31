@@ -8,8 +8,9 @@ export const About = () => {
     return (
         <div className="about-page">
 
+            <Navbar />
+
             <main className="about">
-                <Navbar />
 
                 <div className="about-content">
                         <img 
