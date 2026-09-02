@@ -131,7 +131,7 @@ export const projects = [
         title: "AniVerse",
         subtitle: "--------------",
         description:
-            "An Unreal Engine 5 gameplay programming prototype exploring momentum-based dragon movement, flight, diving, and aerial control.",
+            "A full-stack anime tracking platform built with Angular and Spring Boot to deliever appealing UI and strong backend functionality.",
         category: "Web Development",
 
         image: aniverseImage,
@@ -183,7 +183,7 @@ export const projects = [
             "Capcitator"
         ],
 
-        demo: "https://your-demo-url.com",
+        demo: "https://roamie-tau.vercel.app",
         github: "https://github.com/Paymvi/Capstone_Project",
 
         type: "Web Application",
@@ -213,14 +213,14 @@ export const projects = [
         title: "Lexical Feature-Based Phishing Detection Using ML Logistic Regression: Performance and Tradeoff Analysis",
         subtitle: "--------------",
         description:
-            "An Unreal Engine 5 gameplay programming prototype exploring momentum-based dragon movement, flight, diving, and aerial control.",
+            "An empirical study on phishing URL detection using lexical feature engineering and binary classification models, analyzing performance metrics and decision threshold tradeoffs.",
         category: "AI/ML",
 
         image: researchImage,
 
         technologies: [
-            "Unreal Engine 5",
-            "C++",
+            "JupyterLab",
+            "Python",
             "Git",
         ],
 
@@ -365,20 +365,22 @@ export const projects = [
     {
         id: "chessPal",
         title: "ChessPal",
-        subtitle: "--------------",
+        subtitle: "Learn and improve your chess skills with real-time guidance",
         description:
-            "An Unreal Engine 5 gameplay programming prototype exploring momentum-based dragon movement, flight, diving, and aerial control.",
+            "A web-based chess application that combines gameplay with an interactive AI tutor. Utilizing React, Vite, Node.js, Stockfish, and GPT-4o-mini, the application provides players with contextual guidance and explanations during chess matches.",
         category: "Web Development",
 
         image: chessPal,
 
         technologies: [
-            "Unreal Engine 5",
-            "C++",
-            "Git",
+            "React 18",
+            "Vite",
+            "Node.js",
+            "Stockfish",
+            "GPT-4o-mini"
         ],
 
-        demo: "https://your-demo-url.com",
+        demo: "https://chess-pal.vercel.app/",
         github: "https://github.com/Paymvi/ChessPal",
 
         type: "Web Development",
@@ -386,7 +388,9 @@ export const projects = [
         status: "In Progress",
 
         sections: {
-            project: "...",
+            project: [
+                "ChessPal is a web-based chess application that combines gameplay with an interactive AI tutor. Players can challenge a CPU opponent while receiving contextual guidance throughout the game. Built with React, Vite, and Node.js, the application uses Stockfish to analyze positions and identify optimal moves, with FEN strings providing a reliable representation of the current board state. Stockfish's analysis is then passed to GPT-4o-mini to generate human-readable explanations and personalized guidance for the embedded tutor."
+            ],
             designAndDevelopment: "...",
             implementation: "...",
             challenges: "...",
