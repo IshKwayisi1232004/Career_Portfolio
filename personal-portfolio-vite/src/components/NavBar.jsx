@@ -12,6 +12,7 @@ export const Navbar = () => {
               <Link to="/about">About Me</Link>
               <Link to="/projects">Projects</Link>
               <Link to="/skills">Skills</Link>
+              <Link to="/experience">Experience</Link>
               <Link to="/contact">Contact</Link>
           </div>
         </nav>

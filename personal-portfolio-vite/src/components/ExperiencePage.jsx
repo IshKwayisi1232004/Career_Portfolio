@@ -24,11 +24,11 @@ export const Experience = () => {
     };
 
     return (
-        <section className="experience" id="experience">
-            <div>
+            <><div className="experience-page">
 
-                <navbar />
-                
+            <Navbar />
+
+            <main className="experience">
 
                 <h2>Experience</h2>
 
@@ -62,8 +62,8 @@ export const Experience = () => {
                                 <div className="timeline-card">
                                     <div className="timeline-card-header">
                                         <img src={mvhsLogo} alt="MVHS Logo" className="timeline-logo" />
-                                        
-                                        <div> 
+
+                                        <div>
                                             <h2>High School Diploma</h2>
                                             <h3>Manchester Valley High School</h3>
                                         </div>
@@ -73,7 +73,7 @@ export const Experience = () => {
                                         <span>2019 - 2023</span>
                                         <span>Penacook, NH</span>
                                         <span>GPA: 4.19</span>
-                                    </div> 
+                                    </div>
                                 </div>
                                 <div className="timeline-dot"></div>
                             </div>
@@ -82,8 +82,8 @@ export const Experience = () => {
                                 <div className="timeline-card">
                                     <div className="timeline-card-header">
                                         <img src={snhuLogo} alt="SNHU Logo" className="timeline-logo" />
-                                        
-                                        <div> 
+
+                                        <div>
                                             <h2>Bachelor of Science in Computer Science</h2>
                                             <h3>Southern New Hampshire University</h3>
                                         </div>
@@ -93,18 +93,18 @@ export const Experience = () => {
                                         <span>2023 - 2026</span>
                                         <span>Manchester, NH</span>
                                         <span>GPA: 3.92</span>
-                                    </div> 
+                                    </div>
                                 </div>
                                 <div className="timeline-dot"></div>
                             </div>
 
-                            
+
                             <div className="timeline-item">
                                 <div className="timeline-card">
                                     <div className="timeline-card-header">
                                         <img src={gatechLogo} alt="GA Logo" className="timeline-logo" />
-                                            
-                                        <div> 
+
+                                        <div>
                                             <h2>Master of Science in Computer Science</h2>
                                             <h3>Georgia Institute of Technology</h3>
                                         </div>
@@ -114,7 +114,7 @@ export const Experience = () => {
                                         <span>2026 - 2028</span>
                                         <span>Online</span>
                                         <span>GPA: N/A</span>
-                                    </div>    
+                                    </div>
                                 </div>
                                 <div className="timeline-dot"></div>
                             </div>
@@ -131,7 +131,7 @@ export const Experience = () => {
 
                 {activeTab === "work" && (
                     <div className="timeline-container">
-                
+
                         <button
                             className="timeline-scroll-button left"
                             onClick={() => scrollTimeline(-1)}
@@ -144,8 +144,8 @@ export const Experience = () => {
                                 <div className="timeline-card">
                                     <div className="timeline-card-header">
                                         <img src={marketBasketLogo} alt="Market Basket Logo" className="timeline-logo" />
-    
-                                        <div> 
+
+                                        <div>
                                             <h2>Bagger</h2>
                                             <h3>Market Basket</h3>
                                         </div>
@@ -154,7 +154,7 @@ export const Experience = () => {
                                     <div className="timeline-details">
                                         <span>June 2023 - October 2023</span>
                                         <span>Concord, NH</span>
-                                    </div>    
+                                    </div>
                                 </div>
                                 <div className="timeline-dot"></div>
                             </div>
@@ -163,8 +163,8 @@ export const Experience = () => {
                                 <div className="timeline-card">
                                     <div className="timeline-card-header">
                                         <img src={jerseyMikesLogo} alt="Jersey Mike's Subs Logo" className="timeline-logo" />
-                                            
-                                        <div> 
+
+                                        <div>
                                             <h2>Crew Member</h2>
                                             <h3>Jersey Mike's Subs</h3>
                                         </div>
@@ -180,16 +180,15 @@ export const Experience = () => {
                             </div>
                         </div>
                         <button
-                                className="timeline-scroll-button right"
-                                onClick={() => scrollTimeline(1)}
-                            >
-                                →
+                            className="timeline-scroll-button right"
+                            onClick={() => scrollTimeline(1)}
+                        >
+                            →
                         </button>
-                        
+
                     </div>
                 )}
-            </div>
-            <Footer />
-        </section>
+            </main>
+        </div><Footer /></>
     );
 };

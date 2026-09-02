@@ -254,7 +254,7 @@ export const projects = [
             "GitHub"
         ],
 
-        demo: "https://your-demo-url.com",
+        demo: "https://ishmael-kwayisi.itch.io/the-crown-of-exodus",
         github: "https://github.com/aqhoang2005/CS250SprintsProject",
 
         type: "Game Development",
@@ -398,7 +398,7 @@ export const projects = [
         title: "Project Not Zelda",
         subtitle: "P.S. This is definitely not a Zelda clone",
         description:
-            "An Unity gameplay programming prototype demonstrating level design, game systems and game A.I.",
+            "A Unity gameplay programming prototype demonstrating level design, game systems and game A.I.",
         category: "Game Development",
 
         image: notZelda,
@@ -412,7 +412,7 @@ export const projects = [
             "Pixlr"
         ],
 
-        demo: "https://your-demo-url.com",
+        demo: "https://ishmael-kwayisi.itch.io/project-not-zelda",
         github: "https://github.com/IshKwayisi1232004/Project-Not-Zelda-it145",
 
         type: "Game Development",
