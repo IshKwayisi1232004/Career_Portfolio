@@ -127,85 +127,219 @@ export const projects = [
         }
     },
     {
-        id: "aniVerse",
+        id: "aniverse",
         title: "AniVerse",
-        subtitle: "--------------",
+        subtitle: "A full-stack anime discovery and tracking platform.",
         description:
-            "A full-stack anime tracking platform built with Angular and Spring Boot to deliever appealing UI and strong backend functionality.",
+            "A full-stack web application that allows users to discover, search, filter, and rate anime while managing personalized content through user accounts.",
         category: "Web Development",
 
         image: aniverseImage,
 
         technologies: [
             "Angular",
-            "Spring Boot",
-            "Ionic",
+            "TypeScript",
             "Java",
+            "Spring Boot",
             "PostgreSQL",
-            "Docker"
+            "REST API",
+            "Jikan API",
+            "Git"
         ],
 
-        demo: "https://your-demo-url.com",
+        demo: null,
+
         github: "https://github.com/IshKwayisi1232004/Anime_Website",
 
-        type: "Web Development",
+        type: "Web Application",
+        role: "Full-Stack Developer",
         development: "Solo",
+        timeframe: "July 2026 - Present",
         status: "In Progress",
 
+        media: [
+            {
+                type: "image",
+                src: aniverseImage,
+                alt: "AniVerse"
+            }
+        ],
+
         sections: {
-            project: "...",
-            designAndDevelopment: "...",
-            implementation: "...",
-            challenges: "...",
-            future: "..."
+            project: [
+                "AniVerse is a full-stack anime discovery and tracking platform inspired by applications such as MyAnimeList, Letterboxd, and Backlogged. The application allows users to browse anime, search and filter titles, view detailed information, and manage personalized ratings through user accounts.",
+
+                "The project was built from scratch to provide hands-on experience designing and connecting a modern frontend, backend REST API, external API integration, authentication, and relational database."
+            ],
+
+            designAndDevelopment: {
+                introduction: [
+                    "As the sole developer, I designed and implemented both the frontend and backend of AniVerse. The application is structured around a separation of responsibilities between the Angular frontend, Spring Boot backend, external anime data, and PostgreSQL database."
+                ],
+
+                gameplaySystems: [
+                    {
+                        name: "Anime Discovery",
+                        description:
+                            "Designed the browsing experience for discovering anime through dynamic content retrieved from an external API."
+                    },
+                    {
+                        name: "Search & Filtering",
+                        description:
+                            "Implemented search and filtering functionality to help users quickly find anime based on relevant criteria."
+                    },
+                    {
+                        name: "User Accounts",
+                        description:
+                            "Developed account functionality for maintaining personalized user information and anime ratings."
+                    },
+                    {
+                        name: "Anime Ratings",
+                        description:
+                            "Implemented functionality for users to rate anime and associate those ratings with their accounts."
+                    },
+                    {
+                        name: "REST API",
+                        description:
+                            "Designed backend endpoints to connect the Angular frontend with application data and user functionality."
+                    }
+                ],
+
+                development: [
+                    "I developed AniVerse as a solo project, allowing me to make architectural decisions across the entire application and gain experience working across both frontend and backend responsibilities."
+                ]
+            },
+
+            implementation: [
+                "The frontend was developed using Angular and TypeScript, with reusable components responsible for displaying anime information, handling user interactions, and managing application state.",
+
+                "The backend was developed using Java and Spring Boot. I designed RESTful endpoints to provide a structured interface between the frontend, application logic, database, and external anime API.",
+
+                "AniVerse integrates the Jikan REST API to retrieve dynamic anime information rather than relying on static mock data. This required creating a data flow between the external service, Spring Boot backend, and Angular frontend.",
+
+                "PostgreSQL is used to persist application and user-related data. The relational structure allows users, anime, and ratings to be associated while maintaining a scalable foundation for additional features.",
+
+                "I also implemented caching around anime searches to reduce unnecessary requests to the external API and improve the application's data retrieval process."
+            ],
+
+            challenges: [
+                "One of the major challenges was replacing static mock data with data from the Jikan API while maintaining a clean separation between the external service and the frontend. Rather than having Angular communicate directly with the external API, I designed the Spring Boot backend to act as the intermediary between the application and external data source.",
+
+                "Another challenge was designing the relationships between users, anime, and ratings. This required thinking about how data should be represented relationally and how the backend should expose that information through REST endpoints."
+            ],
+
+            future: [
+                "AniVerse is still under active development. Future work includes continuing to refine the user experience, expanding personalization features, improving caching and API performance, and preparing the application for deployment."
+            ]
         }
     },
     {
         id: "roamie",
         title: "Roamie",
-        subtitle: "Roam Together",
+        subtitle: "Roam together.",
         description:
-            "Roamie is a web based game where players connect with their local area and each other by turning nearby places into interactive item drops, allowing players to collect and trade personalized collectibles for their animal avatar through real-world exploration.",
+            "A location-based web game that transforms real-world exploration into an interactive multiplayer experience.",
         category: "Web Development",
 
         image: roamieImage,
 
         technologies: [
-            "React 18",
-            "Vite",
-            "Node.js v18",
-            "React Leaflet",
-            "JavaScript",
-            "Tailwind CSS",
+            "React",
+            "Node.js",
+            "Express",
             "PostgreSQL",
-            "Docker",
-            "Notion",
-            "Capcitator"
+            "REST API",
+            "JWT",
+            "Zod",
+            "Git"
         ],
 
-        demo: "https://roamie-tau.vercel.app",
+        demo: null,
+
         github: "https://github.com/Paymvi/Capstone_Project",
 
-        type: "Web Application",
-        role: "Project Manager and Backend Developer",
-        timeframe: "Jan. 2026 - Present",
+        type: "Web Application / Game",
+        role: "Backend Developer",
         development: "3-Person Team",
-        status: "In Development",
+        timeframe: "2025 - 2026",
+        status: "Completed",
 
         media: [
             {
                 type: "image",
                 src: roamieImage,
-                alt: "Hero image"
+                alt: "Roamie"
             }
         ],
 
         sections: {
-            project: "...",
-            designAndDevelopment: "...",
-            implementation: "...",
-            challenges: "...",
-            future: "..."
+            project: [
+                "Roamie is a location-based web game designed to encourage players to connect with their local surroundings and each other through real-world exploration. Players discover nearby locations that become interactive item drops, allowing them to collect and trade personalized collectibles for their animal avatar.",
+
+                "The project was developed as a capstone project by a three-person team. I focused primarily on the backend architecture and development, building the systems responsible for authentication, gameplay data, inventory, customization, geolocation, and administrative functionality."
+            ],
+
+            designAndDevelopment: {
+                introduction: [
+                    "As the backend developer, I designed and implemented the server-side architecture that connected Roamie's gameplay systems with the database and frontend. I developed more than 20 REST API endpoints covering authentication, geolocation gameplay, inventory, customization, and administrative functionality."
+                ],
+
+                gameplaySystems: [
+                    {
+                        name: "Authentication",
+                        description:
+                            "Implemented user authentication and authorization using JWTs and HttpOnly cookies."
+                    },
+                    {
+                        name: "Geolocation Gameplay",
+                        description:
+                            "Developed backend functionality for location-based gameplay and interactions."
+                    },
+                    {
+                        name: "Inventory",
+                        description:
+                            "Implemented systems for managing player collectibles and inventory data."
+                    },
+                    {
+                        name: "Customization",
+                        description:
+                            "Created backend functionality supporting personalized animal avatars and player customization."
+                    },
+                    {
+                        name: "Admin Tools",
+                        description:
+                            "Developed administrative endpoints for managing application data and gameplay functionality."
+                    }
+                ],
+
+                development: [
+                    "Working as part of a three-person team required close coordination between frontend and backend development. I worked with my teammates to define API behavior and ensure that the systems I developed integrated correctly with the rest of the application."
+                ]
+            },
+
+            implementation: [
+                "Roamie's backend was developed using Node.js and Express, with PostgreSQL providing persistent relational data storage. I designed RESTful endpoints to allow the frontend to interact with authentication, player data, gameplay systems, inventory, customization, and administrative functionality.",
+
+                "I implemented JWT-based authentication with HttpOnly cookies to securely maintain authenticated sessions while reducing exposure of authentication tokens to client-side scripts. Role-based authorization was also used to restrict administrative functionality.",
+
+                "Input validation was handled using Zod to ensure that incoming API requests matched the expected structure before reaching application logic or database operations.",
+
+                "I implemented rate limiting, account lockouts, SQL injection detection, security logging, and automated IP blocking to strengthen the backend against common forms of abuse and malicious requests.",
+
+                "The backend architecture was designed around separate responsibilities for routing, validation, authentication, database interaction, and gameplay logic. This helped keep the API maintainable as additional gameplay features were introduced."
+            ],
+
+            challenges: [
+                "One of the major challenges was designing a backend that could support both traditional web application functionality and location-based gameplay. The API needed to handle user accounts and persistent data while also supporting interactions based on a player's real-world location.",
+
+                "Security was another major consideration. Because Roamie handles user accounts and gameplay data, I needed to consider how malicious requests could affect the application. This led to implementing multiple layers of protection, including validation, rate limiting, account lockouts, SQL injection detection, security logging, and automated IP blocking.",
+
+                "Working within a three-person team also required careful coordination between frontend and backend development. Establishing clear API contracts and communicating changes helped reduce integration issues as development progressed."
+            ],
+
+            future: [
+                "Roamie was developed as a capstone project, and the completed project provides a foundation for expanding its location-based gameplay, social features, and collectible systems in the future."
+            ]
         }
     },
     {
@@ -365,36 +499,101 @@ export const projects = [
     {
         id: "chessPal",
         title: "ChessPal",
-        subtitle: "Learn and improve your chess skills with real-time guidance",
+        subtitle: "An AI-powered chess companion.",
         description:
-            "A web-based chess application that combines gameplay with an interactive AI tutor. Utilizing React, Vite, Node.js, Stockfish, and GPT-4o-mini, the application provides players with contextual guidance and explanations during chess matches.",
+            "A web-based chess application that combines traditional chess gameplay with AI-powered assistance.",
         category: "Web Development",
 
         image: chessPal,
 
         technologies: [
-            "React 18",
-            "Vite",
+            "JavaScript",
             "Node.js",
-            "Stockfish",
-            "GPT-4o-mini"
+            "Express",
+            "OpenAI API",
+            "Chess.js",
+            "HTML",
+            "CSS",
+            "Git"
         ],
 
-        demo: "https://chess-pal.vercel.app/",
+        demo: null,
+
         github: "https://github.com/Paymvi/ChessPal",
 
-        type: "Web Development",
-        development: "2-Person Team",
-        status: "In Progress",
+        type: "Web Application",
+        role: "Full-Stack Developer",
+        development: "Solo",
+        timeframe: "2026",
+        status: "Completed",
+
+        media: [
+            {
+                type: "image",
+                src: chessPal,
+                alt: "ChessPal"
+            }
+        ],
 
         sections: {
             project: [
-                "ChessPal is a web-based chess application that combines gameplay with an interactive AI tutor. Players can challenge a CPU opponent while receiving contextual guidance throughout the game. Built with React, Vite, and Node.js, the application uses Stockfish to analyze positions and identify optimal moves, with FEN strings providing a reliable representation of the current board state. Stockfish's analysis is then passed to GPT-4o-mini to generate human-readable explanations and personalized guidance for the embedded tutor."
+                "ChessPal is a web-based chess application that combines traditional chess gameplay with AI-powered assistance. The project explores how an AI system can be integrated into an interactive application to provide users with a more conversational and educational chess experience.",
+
+                "I developed the application from the ground up, including the frontend interface, backend server, chess functionality, and integration with the OpenAI API."
             ],
-            designAndDevelopment: "...",
-            implementation: "...",
-            challenges: "...",
-            future: "..."
+
+            designAndDevelopment: {
+                introduction: [
+                    "As the sole developer, I designed and implemented the application's frontend and backend. The project required coordinating the chess game state with the backend while also creating a separate communication flow for AI-powered functionality."
+                ],
+
+                gameplaySystems: [
+                    {
+                        name: "Chess Gameplay",
+                        description:
+                            "Implemented the core functionality required to manage chess moves and game state."
+                    },
+                    {
+                        name: "AI Integration",
+                        description:
+                            "Integrated the OpenAI API to provide AI-powered responses and assistance."
+                    },
+                    {
+                        name: "Game State Management",
+                        description:
+                            "Managed the current state of the chess game and player interactions."
+                    },
+                    {
+                        name: "Backend API",
+                        description:
+                            "Developed server-side endpoints for communicating between the frontend and external AI service."
+                    }
+                ],
+
+                development: [
+                    "Developing ChessPal independently allowed me to experiment with the architecture of an AI-integrated application while maintaining control over the frontend, backend, and external API communication."
+                ]
+            },
+
+            implementation: [
+                "The application uses a Node.js and Express backend to provide an intermediary between the frontend and the OpenAI API. This keeps API communication and sensitive configuration on the server rather than exposing it directly to the client.",
+
+                "I used JavaScript to manage the application's frontend interactions and communicate with the backend API. The chess state is maintained as users interact with the board and make moves.",
+
+                "The OpenAI API is integrated into the backend to provide AI-powered functionality. Requests from the application are processed by the server before being sent to the external AI service, allowing the application to control how AI functionality is exposed to the user.",
+
+                "The application was structured so that the chess functionality and AI functionality remain separate concerns. This makes it easier to modify or extend either system without tightly coupling the core chess experience to the AI service."
+            ],
+
+            challenges: [
+                "One of the primary challenges was determining how to integrate an external AI service into an interactive application without making the AI functionality responsible for the core game logic. I addressed this by keeping the chess state and gameplay functionality separate from the AI communication layer.",
+
+                "Another challenge was handling communication between the frontend, backend, and external API. Structuring the application around a dedicated backend allowed me to control requests to the AI service while keeping sensitive configuration out of the frontend."
+            ],
+
+            future: [
+                "Future improvements could include deeper chess analysis, more contextual AI feedback based on the current board position, additional game modes, and expanded functionality for players who want to use ChessPal as a learning tool."
+            ]
         }
     },
     {
