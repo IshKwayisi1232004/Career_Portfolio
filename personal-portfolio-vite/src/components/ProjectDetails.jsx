@@ -244,58 +244,69 @@ const ProjectSection = ({ title, content }) => {
 const ProjectDesignSection = ({ title, content }) => {
     return (
         <section className="project-section">
-
             <h2>{title}</h2>
 
-            {/* Introduction */}
-            {content.introduction.map((paragraph, index) => (
-                <p key={index}>
-                    {paragraph}
-                </p>
-            ))}
+            {content.introduction && (
+                content.introduction.map((paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                ))
+            )}
 
-            {/* Gameplay Systems */}
-            {content.gameplaySystems && (
+            {content.coreFeatures && (
                 <>
-                    <h3>Gameplay Systems</h3>
+                    <h3 className="project-subsection-title">
+                        Core Features
+                    </h3>
 
                     <ul>
-                        {content.gameplaySystems.map((system, index) => (
+                        {content.coreFeatures.map((feature, index) => (
                             <li key={index}>
-                                <strong>{system.name}</strong> —{" "}
-                                {system.description}
+                                <strong>{feature.name}</strong> — {feature.description}
                             </li>
                         ))}
                     </ul>
                 </>
             )}
 
-            {/* Level Design */}
+            {content.gameplaySystems && (
+                <>
+                    <h3 className="project-subsection-title">
+                        Gameplay Systems
+                    </h3>
+
+                    <ul>
+                        {content.gameplaySystems.map((system, index) => (
+                            <li key={index}>
+                                <strong>{system.name}</strong> — {system.description}
+                            </li>
+                        ))}
+                    </ul>
+                </>
+            )}
+
             {content.levelDesign && (
                 <>
-                    <h3>Level Design</h3>
+                    <h3 className="project-subsection-title">
+                        Level Design
+                    </h3>
 
                     {content.levelDesign.map((paragraph, index) => (
-                        <p key={index}>
-                            {paragraph}
-                        </p>
+                        <p key={index}>{paragraph}</p>
                     ))}
                 </>
             )}
 
-            {/* Scrum Master */}
             {content.scrumMaster && (
                 <>
-                    <h3>Scrum Master</h3>
+                    <h3 className="project-subsection-title">
+                        Scrum Master
+                    </h3>
 
                     {content.scrumMaster.map((paragraph, index) => (
-                        <p key={index}>
-                            {paragraph}
-                        </p>
+                        <p key={index}>{paragraph}</p>
                     ))}
                 </>
             )}
-
         </section>
     );
 };

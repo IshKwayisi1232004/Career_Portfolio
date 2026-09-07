@@ -174,39 +174,26 @@ export const projects = [
 
             designAndDevelopment: {
                 introduction: [
-                    "As the sole developer, I designed and implemented both the frontend and backend of AniVerse. The application is structured around a separation of responsibilities between the Angular frontend, Spring Boot backend, external anime data, and PostgreSQL database."
+                    "AniVerse was designed as a full-stack anime discovery and tracking platform, allowing users to browse anime, search for specific titles, filter results, and maintain personalized ratings through their accounts."
                 ],
 
-                gameplaySystems: [
+                coreFeatures: [
                     {
                         name: "Anime Discovery",
-                        description:
-                            "Designed the browsing experience for discovering anime through dynamic content retrieved from an external API."
+                        description: "Allows users to browse anime and explore available titles through dynamically retrieved content."
                     },
                     {
-                        name: "Search & Filtering",
-                        description:
-                            "Implemented search and filtering functionality to help users quickly find anime based on relevant criteria."
+                        name: "Search and Filtering",
+                        description: "Provides users with tools to search for anime and narrow results based on available criteria."
                     },
                     {
                         name: "User Accounts",
-                        description:
-                            "Developed account functionality for maintaining personalized user information and anime ratings."
+                        description: "Allows users to create accounts and maintain personalized anime-related data."
                     },
                     {
                         name: "Anime Ratings",
-                        description:
-                            "Implemented functionality for users to rate anime and associate those ratings with their accounts."
-                    },
-                    {
-                        name: "REST API",
-                        description:
-                            "Designed backend endpoints to connect the Angular frontend with application data and user functionality."
+                        description: "Enables users to rate anime and associate their ratings with their accounts."
                     }
-                ],
-
-                development: [
-                    "I developed AniVerse as a solo project, allowing me to make architectural decisions across the entire application and gain experience working across both frontend and backend responsibilities."
                 ]
             },
 
@@ -281,39 +268,30 @@ export const projects = [
 
             designAndDevelopment: {
                 introduction: [
-                    "As the backend developer, I designed and implemented the server-side architecture that connected Roamie's gameplay systems with the database and frontend. I developed more than 20 REST API endpoints covering authentication, geolocation gameplay, inventory, customization, and administrative functionality."
+                    "Roamie is a location-based web game designed to encourage players to explore their local area while interacting with other players through collectible items and animal avatars."
                 ],
 
-                gameplaySystems: [
+                coreFeatures: [
                     {
                         name: "Authentication",
-                        description:
-                            "Implemented user authentication and authorization using JWTs and HttpOnly cookies."
+                        description: "Implemented account registration, login, session management, and role-based access controls."
                     },
                     {
-                        name: "Geolocation Gameplay",
-                        description:
-                            "Developed backend functionality for location-based gameplay and interactions."
+                        name: "Location-Based Gameplay",
+                        description: "Connects gameplay interactions to real-world locations, allowing players to discover interactive item drops while exploring their surroundings."
                     },
                     {
-                        name: "Inventory",
-                        description:
-                            "Implemented systems for managing player collectibles and inventory data."
+                        name: "Inventory System",
+                        description: "Allows players to collect, manage, and interact with items discovered through gameplay."
                     },
                     {
-                        name: "Customization",
-                        description:
-                            "Created backend functionality supporting personalized animal avatars and player customization."
+                        name: "Avatar Customization",
+                        description: "Allows players to personalize their animal avatars using collected items."
                     },
                     {
                         name: "Admin Tools",
-                        description:
-                            "Developed administrative endpoints for managing application data and gameplay functionality."
+                        description: "Provides administrative functionality for managing game data and monitoring system activity."
                     }
-                ],
-
-                development: [
-                    "Working as part of a three-person team required close coordination between frontend and backend development. I worked with my teammates to define API behavior and ensure that the systems I developed integrated correctly with the rest of the application."
                 ]
             },
 
@@ -544,34 +522,22 @@ export const projects = [
 
             designAndDevelopment: {
                 introduction: [
-                    "As the sole developer, I designed and implemented the application's frontend and backend. The project required coordinating the chess game state with the backend while also creating a separate communication flow for AI-powered functionality."
+                    "ChessPal was designed as an interactive chess application that combines traditional chess gameplay with AI-powered assistance."
                 ],
 
-                gameplaySystems: [
+                coreFeatures: [
                     {
                         name: "Chess Gameplay",
-                        description:
-                            "Implemented the core functionality required to manage chess moves and game state."
+                        description: "Provides an interactive chessboard for users to play and manage chess games."
                     },
                     {
-                        name: "AI Integration",
-                        description:
-                            "Integrated the OpenAI API to provide AI-powered responses and assistance."
+                        name: "AI Assistance",
+                        description: "Integrates AI functionality to provide users with intelligent feedback and assistance during chess sessions."
                     },
                     {
                         name: "Game State Management",
-                        description:
-                            "Managed the current state of the chess game and player interactions."
-                    },
-                    {
-                        name: "Backend API",
-                        description:
-                            "Developed server-side endpoints for communicating between the frontend and external AI service."
+                        description: "Tracks the current state of the chessboard, player turns, and game progression."
                     }
-                ],
-
-                development: [
-                    "Developing ChessPal independently allowed me to experiment with the architecture of an AI-integrated application while maintaining control over the frontend, backend, and external API communication."
                 ]
             },
 
