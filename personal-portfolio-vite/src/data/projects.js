@@ -342,6 +342,8 @@ export const projects = [
             "Jupyter Notebook"
         ],
 
+        github:"https://github.com/IshKwayisi1232004/Phishing_ML_Project ",
+
         media: [
             {
                 type: "image",
@@ -890,6 +892,8 @@ export const projects = [
             "Jupyter Notebook"
         ],
 
+        github: "https://github.com/IshKwayisi1232004/Client_Server_Dev_Project",
+
         media: [
             {
                 type: "image",
@@ -1010,6 +1014,8 @@ export const projects = [
             "SQLite",
             "JUnit"
         ],
+
+        github: "https://github.com/IshKwayisi1232004/EventTrackingApp_Kwayisi",
 
         media: [
             {
