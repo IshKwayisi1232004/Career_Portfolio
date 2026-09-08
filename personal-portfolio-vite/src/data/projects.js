@@ -321,34 +321,90 @@ export const projects = [
         }
     },
     {
-        id: "urlResearch",
-        title: "Lexical Feature-Based Phishing Detection Using ML Logistic Regression: Performance and Tradeoff Analysis",
-        subtitle: "--------------",
-        description:
-            "An empirical study on phishing URL detection using lexical feature engineering and binary classification models, analyzing performance metrics and decision threshold tradeoffs.",
+        id: "phishing-ml",
+        title: "Phishing URL Detection with Machine Learning",
+        subtitle: "Case Study of lexical feature engineering for phishing detection",
+        description: "An empirical study of lexical feature engineering, logistic regression, and classification threshold tradeoffs for phishing URL detection.",
         category: "AI/ML",
-
         image: researchImage,
+        type: "Machine Learning / Security Research",
+        role: "ML Researcher",
+        timeframe: "Academic Research Project",
+        development: "2-person team",
+        status: "Completed",
 
         technologies: [
-            "JupyterLab",
             "Python",
-            "Git",
+            "Pandas",
+            "Scikit-learn",
+            "Matplotlib",
+            "Seaborn",
+            "Jupyter Notebook"
         ],
 
-        demo: "https://your-demo-url.com",
-        github: "https://github.com/IshKwayisi1232004/Phishing_ML_Project",
-
-        type: "AI/ML",
-        development: "Solo",
-        status: "In Progress",
+        media: [
+            {
+                type: "image",
+                src: researchImage,
+                alt: "Hero image"
+            }
+        ],
 
         sections: {
-            project: "...",
-            designAndDevelopment: "...",
-            implementation: "...",
-            challenges: "...",
-            future: "..."
+            project: [
+                "This project investigates whether lexical characteristics extracted directly from URLs can be used to distinguish phishing websites from legitimate websites. The research evaluates a logistic regression classifier and examines how feature selection and classification thresholds affect phishing detection performance.",
+                
+                "Using the StealthPhisher dataset, the project analyzes URL characteristics such as length, dots, hyphens, digits, HTTPS usage, and the presence of terms such as login and verify. Multiple experiments were conducted to evaluate model performance and investigate the tradeoffs between detecting phishing URLs and generating false positives."
+            ],
+
+            designAndDevelopment: {
+                introduction: [
+                    "The project was designed as an empirical machine-learning experiment rather than a production phishing detection system. The analysis follows a repeatable workflow consisting of data preprocessing, lexical feature engineering, model training, evaluation, and comparison of different model configurations."
+                ],
+
+                coreFeatures: [
+                    {
+                        name: "Lexical Feature Engineering",
+                        description: "Extracted URL-level characteristics including URL length, dot count, hyphen count, digit count, HTTPS presence, and security-related keywords."
+                    },
+                    {
+                        name: "Logistic Regression Classification",
+                        description: "Trained logistic regression models to classify URLs as either phishing or legitimate."
+                    },
+                    {
+                        name: "Model Evaluation",
+                        description: "Evaluated model performance using accuracy, precision, recall, F1-score, confusion matrices, ROC curves, and AUC."
+                    },
+                    {
+                        name: "Threshold Analysis",
+                        description: "Experimented with classification thresholds to study how changing the decision boundary affected phishing recall, precision, and overall accuracy."
+                    },
+                    {
+                        name: "Feature Importance Analysis",
+                        description: "Examined logistic regression coefficients to identify which lexical characteristics contributed most strongly to phishing classification."
+                    }
+                ]
+            },
+
+            implementation: [
+                "The analysis was implemented in Python using Pandas for data preparation and Scikit-learn for machine-learning operations. URL strings were normalized and transformed into numerical features before being divided into training and testing datasets using an 80/20 split.",
+                
+                "Logistic regression was used as the primary classification algorithm. The first experiment achieved 87% accuracy and an AUC of 0.92 using the selected lexical features. The model also achieved 96% precision and approximately 79% recall for the phishing class.",
+                
+                "Additional experiments adjusted the classification threshold and removed HTTPS from the feature set to investigate how individual features influenced model behavior. Removing HTTPS reduced the model's AUC from 0.92 to 0.85 and phishing recall from approximately 79% to 69%, demonstrating the substantial influence of HTTPS within this dataset."
+            ],
+
+            challenges: [
+                "One of the primary challenges was determining which URL characteristics provided meaningful predictive value. Initial experiments included several structural features, requiring analysis of model coefficients and performance metrics to understand which features contributed most strongly to classification.",
+                
+                "Another challenge was interpreting the effect of classification thresholds. Rather than treating accuracy as the only measure of success, I compared precision and recall to understand how changing the decision threshold could alter the balance between missed phishing URLs and incorrectly flagged legitimate URLs.",
+                
+                "The experiments also revealed an important limitation of the dataset. HTTPS was strongly associated with legitimate URLs in the dataset, while a substantial portion of phishing URLs also used HTTPS. This demonstrated how a model can learn dataset-specific patterns that may not generalize well to modern phishing attacks."
+            ],
+
+            future: [
+                "Future work could expand the feature set, evaluate additional machine-learning algorithms, and investigate deep-learning approaches. A production-oriented version could also explore real-time URL analysis and evaluation against more recent phishing datasets to reduce dependence on historical dataset characteristics."
+            ]
         }
     },
     {
@@ -812,34 +868,95 @@ export const projects = [
         }
     },
     {
-        id: "animalHeroes",
+        id: "animal-heroes",
         title: "Animal Heroes",
-        subtitle: "--------------",
-        description:
-            "An Unreal Engine 5 gameplay programming prototype exploring momentum-based dragon movement, flight, diving, and aerial control.",
+        subtitle: "For our brave animal companions",
+        description: "Full-stack animal rescue data dashboard built with Python, MongoDB, and Dash.", 
         category: "Web Development",
-
         image: animalHeroes,
+        type: "Full-Stack Data Dashboard",
+        role: "Developer",
+        timeframe: "Academic Project",
+        development: "Solo",
+        status: "Completed",
 
         technologies: [
-            "Unreal Engine 5",
-            "C++",
-            "Git",
+            "Python",
+            "MongoDB",
+            "PyMongo",
+            "Dash",
+            "Pandas",
+            "Plotly",
+            "Jupyter Notebook"
         ],
 
-        demo: "https://your-demo-url.com",
-        github: "https://github.com/IshKwayisi1232004/Client_Server_Dev_Project",
-
-        type: "Web Development",
-        development: "Solo",
-        status: "In Progress",
+        media: [
+            {
+                type: "image",
+                src: animalHeroes,
+                alt: "Hero image"
+            }
+        ],
 
         sections: {
-            project: "...",
-            designAndDevelopment: "...",
-            implementation: "...",
-            challenges: "...",
-            future: "..."
+            project: [
+                "Animal Heroes is a full-stack data management and visualization application designed for Grazioso Salvare, an international rescue-animal training organization. The application provides a centralized interface for querying animal records and identifying dogs that meet specific criteria for different rescue operations.",
+                
+                "The project combines a MongoDB database with a Python CRUD module and an interactive Dash dashboard. Users can authenticate, filter animal records by rescue type, inspect individual animals, view breed distributions, and access geographic information associated with selected records."
+            ],
+
+            designAndDevelopment: {
+                introduction: [
+                    "The application was designed around the needs of users who need to efficiently search and analyze animal records rather than manually inspect individual database entries. The dashboard therefore combines structured data, filtering controls, visualizations, and geographic information into a single interface."
+                ],
+
+                coreFeatures: [
+                    {
+                        name: "CRUD Database Operations",
+                        description: "Implemented Create, Read, Update, and Delete operations through a reusable Python module for interacting with the MongoDB animal collection."
+                    },
+                    {
+                        name: "User Authentication",
+                        description: "Added username and password authentication before allowing users to access the animal data dashboard."
+                    },
+                    {
+                        name: "Rescue-Type Filtering",
+                        description: "Implemented interactive filters for Water Rescue, Mountain Rescue, Disaster Rescue, and Reset operations using MongoDB queries."
+                    },
+                    {
+                        name: "Interactive Data Table",
+                        description: "Created a searchable, sortable, and paginated data table for browsing animal records."
+                    },
+                    {
+                        name: "Breed Visualization",
+                        description: "Developed a dynamic pie chart that visualizes the breed distribution of animals returned by the active dashboard filter."
+                    },
+                    {
+                        name: "Animal Geolocation",
+                        description: "Implemented an interactive map that displays the geographic location of a selected animal record."
+                    }
+                ]
+            },
+
+            implementation: [
+                "The backend data layer was implemented in Python using PyMongo to communicate with MongoDB. A reusable AnimalShelter class encapsulates database operations and exposes Create, Read, Update, and Delete methods, allowing the dashboard to interact with the database without requiring the interface to manage MongoDB operations directly.",
+                
+                "The client-facing dashboard was developed using Plotly Dash. Dash callbacks connect user interactions to database queries and visual updates, allowing the data table, breed visualization, and geographic map to respond dynamically to user input. Pandas was used to transform MongoDB query results into DataFrames for analysis and visualization.",
+                
+                "The application also uses Dash Leaflet to display the geographic coordinates associated with selected animal records. Selecting a row in the data table updates the map with the corresponding animal's location."
+            ],
+
+            challenges: [
+                "One major challenge was resolving database connection failures while implementing user authentication. When the application could not connect despite using the expected credentials, I isolated the issue by testing the MongoDB connection independently through mongosh. After determining that the database environment itself was having connection issues, I restarted the development environment and, when necessary, re-imported the database with the appropriate credentials.",
+                
+                "Another challenge was becoming comfortable with Python and HTML-based Dash development while having limited prior experience with both technologies. I addressed this by using the development assignments as opportunities to practice the syntax and referencing official documentation while implementing individual features.",
+                
+                "Implementing the dynamic breed visualization also required debugging the scope of variables used by the callback responsible for generating the chart. I resolved the issue by moving the required data retrieval into the callback and using a local DataFrame, allowing the chart to update correctly whenever the displayed dataset changed."
+            ],
+
+            future: [
+                "A potential future direction for Animal Heroes would be expanding the dashboard with additional analytics and filtering capabilities, including more detailed rescue statistics, improved authentication, and additional visualizations for analyzing animal characteristics."
+            ]
         }
     },
     {
@@ -874,34 +991,91 @@ export const projects = [
         }
     },
     {
-        id: "eventTracker",
+        id: "event-tracking-app",
         title: "Event Tracking App",
-        subtitle: "--------------",
-        description:
-            "An Unreal Engine 5 gameplay programming prototype exploring momentum-based dragon movement, flight, diving, and aerial control.",
+        subtitle: "A convenient tracking app for important events",
+        description: "Android event management application for organizing upcoming events and sending reminders.",
         category: "Mobile Development",
-
         image: eventApp,
+        type: "Android Application",
+        role: "Mobile Developer",
+        timeframe: "Academic Project",
+        development: "Solo",
+        status: "Completed",
 
         technologies: [
-            "Unreal Engine 5",
-            "C++",
-            "Git",
+            "Java",
+            "Android Studio",
+            "Room",
+            "SQLite",
+            "JUnit"
         ],
 
-        demo: "https://your-demo-url.com",
-        github: "https://github.com/IshKwayisi1232004/EventTrackingApp_Kwayisi",
-
-        type: "Mobile Development",
-        development: "Solo",
-        status: "In Progress",
+        media: [
+            {
+                type: "image",
+                src: eventApp,
+                alt: "Hero image"
+            }
+        ],
 
         sections: {
-            project: "...",
-            designAndDevelopment: "...",
-            implementation: "...",
-            challenges: "...",
-            future: "..."
+            project: [
+                "Event Tracking App is an Android application designed to help users organize and manage upcoming events. Users can create an account, add events, view saved events through a dashboard, edit existing entries, and delete events they no longer need.",
+                
+                "The application was designed around providing a simple and organized experience for managing event information. Persistent local storage allows event data to remain associated with user accounts rather than being lost when the application is closed."
+            ],
+
+            designAndDevelopment: {
+                introduction: [
+                    "The application design was driven by the core tasks users needed to complete: signing in, entering event information, reviewing saved events, and modifying existing events. I designed the screen layouts before implementing the underlying functionality so that I could identify the required interactions and UI components before writing the application logic."
+                ],
+
+                coreFeatures: [
+                    {
+                        name: "User Accounts",
+                        description: "Provides a login and account creation interface for associating saved events with individual users."
+                    },
+                    {
+                        name: "Event Creation",
+                        description: "Allows users to enter event information and save it to persistent local storage."
+                    },
+                    {
+                        name: "Event Dashboard",
+                        description: "Displays saved events in a centralized dashboard where users can review their upcoming events."
+                    },
+                    {
+                        name: "Event Editing",
+                        description: "Allows users to modify information associated with previously saved events."
+                    },
+                    {
+                        name: "Event Deletion",
+                        description: "Allows users to remove events from their saved event list."
+                    },
+                    {
+                        name: "Event Reminders",
+                        description: "Provides notifications and SMS reminders intended to notify users one day before a saved event occurs."
+                    }
+                ]
+            },
+
+            implementation: [
+                "The application was developed in Java using Android Studio. Room was used as the persistence layer over SQLite, providing structured local data storage and DAO-based operations for managing application records.",
+                
+                "The application follows a multi-screen structure with separate interfaces for authentication, adding events, viewing saved events, and editing existing events. User interaction with the interface triggers the underlying Java functionality responsible for creating, retrieving, updating, and deleting event records.",
+                
+                "Unit testing was used alongside the Android emulator to evaluate application functionality. The emulator provided a way to test the application from the user's perspective, while unit tests helped verify individual functions and identify problems during development."
+            ],
+
+            challenges: [
+                "One of the primary design challenges involved deciding how to organize the event creation interface and event dashboard. The original concept separated these functions, but development time constraints required them to be combined. I ultimately placed the dashboard below the event input controls so that entering event information remained the primary action while saved events remained immediately accessible.",
+                
+                "Another challenge was determining the appropriate functionality needed for each screen before implementation. I addressed this by designing the layouts first and then using Android documentation to determine how the required Java functionality could support each interface element."
+            ],
+
+            future: [
+                "Future improvements could expand the application with a more polished visual design, additional event information fields, recurring events, improved reminder management, and additional notification options."
+            ]
         }
     }
 ]

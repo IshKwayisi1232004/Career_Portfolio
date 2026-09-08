@@ -9,6 +9,13 @@
     margin-top: 2rem;
 }
 
+.experience h1 {
+    text-align: center;
+    margin-top: 2rem;
+    
+    color: rgb(183, 43, 226);
+}
+
 .experience .home-link {
     color: rgb(183, 43, 226);
     font-size: 1.2rem;

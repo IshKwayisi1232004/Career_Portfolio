@@ -19,7 +19,7 @@ export const About = () => {
                             className="profile-image" 
                         />
                     <div className="about-text">
-                        <h3>I don't create software for money, I create software to share richly interactive experiences.</h3>
+                        <h3>Create. Innovate. Inspire.</h3>
                         <p>
                             I'm Ishmael Kwayisi, a first generation African-American graduate student majoring in Computer Science 
                             through Georgia Tech's online master's program. My journey into the world of technology began with a 

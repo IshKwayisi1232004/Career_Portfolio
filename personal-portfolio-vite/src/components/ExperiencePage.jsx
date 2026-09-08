@@ -30,7 +30,7 @@ export const Experience = () => {
 
             <main className="experience">
 
-                <h2>Experience</h2>
+                <h1>Experience</h1>
 
                 <div className="experience-tabs">
                     <button
