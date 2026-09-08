@@ -634,3 +634,79 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
+
+/************ Page Transition ************/
+
+.route-stage {
+  width: 100%;
+  min-height: 100vh;
+
+  /*
+   * Creates the 3D space in which
+   * the page rotates.
+   */
+  perspective: 1800px;
+
+  /*
+   * Prevents the rotating page
+   * from creating horizontal scrollbars.
+   */
+  overflow-x: hidden;
+
+  /*
+   * Keeps the route positioned
+   * normally in the document.
+   */
+  position: relative;
+}
+
+
+.page-transition {
+  width: 100%;
+  min-height: 100vh;
+
+  /*
+   * Allows the page to rotate in 3D.
+   */
+  transform-style: preserve-3d;
+
+  /*
+   * Prevents seeing the backside
+   * of the page during rotation.
+   */
+  backface-visibility: hidden;
+
+  /*
+   * Makes the rotation feel more
+   * like a physical page.
+   */
+  will-change: transform, opacity;
+}
+
+
+/*
+ * Prevent the browser from showing
+ * a horizontal scrollbar during
+ * the rotation.
+ */
+html,
+body {
+  overflow-x: hidden;
+}
+
+
+/*
+ * Accessibility:
+ *
+ * Users who have requested reduced
+ * motion won't get the 3D page turn.
+ */
+@media (prefers-reduced-motion: reduce) {
+
+  .page-transition {
+    transform: none !important;
+    transition: none !important;
+  }
+
+}
+
