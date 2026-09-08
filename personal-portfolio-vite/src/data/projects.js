@@ -741,7 +741,7 @@ export const projects = [
         title: "Computer Graphics Final Project",
         subtitle: "--------------",
         description:
-            "An Unreal Engine 5 gameplay programming prototype exploring momentum-based dragon movement, flight, diving, and aerial control.",
+            "An OpenGL project that practices the use of transforming objects in a 3D space with matrices manipulation.",
         category: "Computer Graphics",
 
         image: compGraphics,
@@ -968,18 +968,18 @@ export const projects = [
         title: "Water Bucket Project",
         subtitle: "--------------",
         description:
-            "An Unreal Engine 5 gameplay programming prototype exploring momentum-based dragon movement, flight, diving, and aerial control.",
+            "An Arduino project that measures the water level in a bucket using an ultra sonic sensor.",
         category: "Embedded Systems",
 
         image: waterLevel,
 
         technologies: [
-            "Unreal Engine 5",
             "C++",
-            "Git",
+            "Arduino Hardware",
+            "GitHub",
+            "Embedded Systems"
         ],
 
-        demo: "https://your-demo-url.com",
         github: "https://github.com/IshKwayisi1232004/Arduino_Projects/tree/main/Water%20Volume%20Project",
 
         type: "Embedded Systems",

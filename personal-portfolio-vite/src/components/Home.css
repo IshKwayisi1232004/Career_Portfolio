@@ -114,6 +114,22 @@
     opacity: 0.6;
 }
 
+.typing-cursor {
+    display: inline-block;
+    margin-left: 2px;
+    animation: blink 1.0s infinite;
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
 
 /* Mobile */
 

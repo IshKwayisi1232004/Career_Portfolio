@@ -9,6 +9,54 @@ import { Footer } from "../components/Footer";
 export const Home = () => {
         const [currentProject, setCurrentProject] = useState(0);
 
+        const titles = [
+            "SOFTWARE ENGINEER",
+            "PROBLEM SOLVER",
+            "GAMEPLAY PROGRAMMER",
+            "FULL-STACK DEVELOPER",
+            "CREATIVE DEVELOPER"
+        ];
+
+        const [currentTitle, setCurrentTitle] = useState(0);
+        const [displayedTitle, setDisplayedTitle] = useState("");
+        const [isDeleting, setIsDeleting] = useState(false);
+
+        useEffect(() => {
+            const currentText = titles[currentTitle];
+
+            const typingSpeed = isDeleting ? 50 : 100;
+
+            const timer = setTimeout(() => {
+                if (!isDeleting) {
+                    // Type the title
+                    setDisplayedTitle(
+                        currentText.substring(0, displayedTitle.length + 1)
+                    );
+
+                    // Finished typing
+                    if (displayedTitle.length === currentText.length) {
+                        setTimeout(() => setIsDeleting(true), 1500);
+                    }
+                } else {
+                    // Delete the title
+                    setDisplayedTitle(
+                        currentText.substring(0, displayedTitle.length - 1)
+                    );
+
+                    // Finished deleting
+                    if (displayedTitle.length === 0) {
+                        setIsDeleting(false);
+                        setCurrentTitle(
+                            (previous) => (previous + 1) % titles.length
+                        );
+                    }
+                }
+            }, typingSpeed);
+
+            return () => clearTimeout(timer);
+        }, [displayedTitle, isDeleting, currentTitle, titles]);
+
+
         useEffect(() => {
             const interval = setInterval(() => {
                 setCurrentProject((previous) =>
@@ -27,7 +75,8 @@ export const Home = () => {
                 <div className="home-content">
 
                     <p className="home-eyebrow">
-                        SOFTWARE ENGINEER
+                        {displayedTitle}
+                        <span className="typing-cursor">|</span>
                     </p>
 
                     <h4>
