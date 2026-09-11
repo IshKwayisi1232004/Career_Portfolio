@@ -22,7 +22,16 @@ import notZeldaArrowVideo from "../assets/Project-Not-Zelda/Project-Not-Zelda-Ar
 
 
 import compGraphics from "../assets/CompGraphics.png";
-import cryptRaider from "../assets/CryptRaider.png"
+
+// Crypt Raider Imports
+import cryptRaider from "../assets/CryptRaider.png";
+import cryptScreen1 from "../assets/CryptRaider/CryptRaiderScreenshot_1.png";
+import cryptScreen2 from "../assets/CryptRaider/CryptRaiderScreenshot_2.png";
+import cryptScreen3 from "../assets/CryptRaider/CryptRaiderScreenshot_3.png";
+import cryptScreen4 from "../assets/CryptRaider/CryptRaiderScreenshot_4.png";
+import cryptScreen5 from "../assets/CryptRaider/CryptRaiderScreenshot_5.png";
+import cryptRaiderDemo from "../assets/CryptRaider/CryptRaider_Demo.mp4";
+
 import animalHeroes from "../assets/AnimalHeroes.png";
 import waterLevel from "../assets/WaterLevelDetection.png";
 import eventApp from "../assets/EventTracker.png";
@@ -51,7 +60,7 @@ export const projects = [
         type: "Game Development",
         role: "Software Engineer",
         timeframe: "July 2026 - Present",
-        development: "Solo",
+        development: "Solo (Personal Project)",
         status: "In Development",
 
         media: [
@@ -66,11 +75,11 @@ export const projects = [
             project: [
                 "Soar: A Dragon Locomotion Prototype is a 3D gameplay systems prototype designed to learn momentum-based gameplay mechanics amd game states. The player controls a dragons character and can transition into 6 different states dependent on their input.",
 
-                "Video demo releasing September 4th on YouTube."
+                "Video demo will be releasing soon!"
             ],
             designAndDevelopment: {
                 introduction: [
-                    "As a gameplay programmer and Dragon Locomotion, I designed and implemented a custom movement system in Unreal Engine 5 using C++. The prototype focuses on momentum-based dragon locomotion across ground and aerial movement, with 6 locomotion states: Grounded, Taking Off, Flying, Gliding, Diving, and Landing. I implemented the systems responsible for transitioning between these states while maintaining responsive player control and preserving movement momentum during aerial transitions.", 
+                    "As a gameplay programmer, I designed and implemented a custom movement system in Unreal Engine 5 using C++. The prototype focuses on momentum-based dragon locomotion across ground and aerial movement, with 6 locomotion states: Grounded, Taking Off, Flying, Gliding, Diving, and Landing. I implemented the systems responsible for transitioning between these states while maintaining responsive player control and preserving movement momentum during aerial transitions.", 
 
                     "The project was designed as an exploration creature locomotion and movement programming in Unreal Engine. I used the Enhanced Input system for player controls and worked with Unreal Engine's Character Movement framework to implement walking, running, sprinting, jumping, and custom aerial movement. A major focus of the prototype was creating transitions that preserved the player's existing momentum rather than resetting movement when entering flight."
 
@@ -123,7 +132,12 @@ export const projects = [
                 
                 "Another challenge that I encountered was perserving ground velocity (from the four ground states: idle, walk, run, charge) into flight. The issue at first was that whenever I would transition into flight, the player character would perserve their velocity when either walking, running or charging. Instead they'd use the default speed from the idle state. What I did to solve the issue was have Unreal capture the velocity speed of the player at the moment they transition into flight. In imnplementation, I set the GetCharacterMovement()->MaxFlySpeed to the current FlightSpeed and clamped it to prevent an unreasonable amount of speed to be generated. From this, I lreaned how to preserve velocity when the player is transitions into a new state amd prevent potentially unpredictable calculations."
             ],
-            future: "The next step for me is to focus using the custom built ground and ariel locomotion I built and transform it into its own component system. I want to explore this avenue because it would allow me to create behavior that Unreal Engine does not provide and makes my system reusable. Which I value, since my ultimate goal is to present this as a plugin in the Unreal Engine asset store."
+            future: [
+                "Dragon Locomotion is still currently under development, as the first iteration of the prototype is complete. However, as I mentioned this is the first iteration there is still more I want to do with it.",
+                "My next steps are to refine and polish the flight mechanics, as there are a few bugs and issues that are occuring. For instance, when the player takes to the skies, they instantly lose forward momentum without flapping the dragon's wings. My intention is to have the dragon carry forward momentum, but lose speed if they aren't engaging with the game and slowly glide downward to ground level as a result.",
+                "Speaking of engaging, I'd like to explore ways for the player to engage with the environment to create more momentum and lift. That way the player is an active particpant during the prototype. The idea is to learn and have my own interpretation of the new Spyro game coming Spring 2027, while injecting some gameplay DNA from the Sonic The Hedgehog series.", 
+                "Afterwards, I would like to focus using the custom built ground and ariel locomotion I built and transform it into its own component system. I want to explore this avenue because it would allow me to create behavior that Unreal Engine does not provide and makes my system reusable. Which I value, since my ultimate goal is to present this as a plugin in the Unreal Engine asset store."
+            ]
         }
     },
     {
@@ -410,6 +424,139 @@ export const projects = [
         }
     },
     {
+        id: "cryptRaider",
+        title: "Crypt Raider",
+        subtitle: "Raid the Crypt to escape!",
+        description:
+            "An Unreal Engine 5 gameplay programming first-person puzzle adventure prototype exploring line tracing, C++ delegates, enhanced input system, components, dynamic lighting, pressure plates, and item pickups.",
+        category: "Game Development",
+
+        image: cryptRaider,
+
+        technologies: [
+            "Unreal Engine 5",
+            "C++",
+            "GitHub",
+        ],
+
+        demo: "https://youtu.be/-aq6ZBmH-2k",
+        github: "https://github.com/IshKwayisi1232004/CryptRaider",
+
+        type: "Game Development",
+        role: "Game Programmer", 
+        timeframe: "Dec. 2024 - Jan. 2025",
+        development: "Solo (Personal Project)",
+        status: "Completed",
+
+        media: [
+            {
+                type: "image",
+                src: cryptRaider,
+                alt: "Hero image"
+            },
+            {
+                type: "image",
+                src: cryptScreen1,
+                alt: "Screenshot 1"
+            },
+            {
+                type: "image",
+                src: cryptScreen2,
+                alt: "Screenshot 2"
+            },
+            {
+                type: "image",
+                src: cryptScreen3,
+                alt: "Screenshot 3"
+            },
+            {
+                type: "image",
+                src: cryptScreen4,
+                alt: "Screenshot 4"
+            },
+            {
+                type: "image",
+                src: cryptScreen5,
+                alt: "Screenshot 5"
+            },
+            {
+                type: "video",
+                src: cryptRaiderDemo,
+                alt: "Demo 1"
+            }
+        ],
+
+        sections: {
+            project: "Crypt Raider is 3D first-person puzzle adventure protoype 3D game development programming and implementation. In this prototype, the player must find objects in their surroundings to place uppon pressure plates to escape the crypyt.",
+            designAndDevelopment: {
+                introduction: [
+                    "As a gameplay programmer, I was responsible for designing and implementing several of the core systems that drive Crypt Raider's moment-to-moment gameplay. I developed gameplay systems in Unreal Engine 5 using C++, including first-person player movement, object interaction, item pickups, pressure plates, dynamic lighting, and gameplay state management. These systems work together to create the game's exploration and puzzle-solving mechanics while demonstrating the use of Unreal Engine's input, collision, component, and event-driven systems.",
+
+                    "The project also gave me experience designing gameplay around modular and reusable systems. Rather than implementing each interaction as a self-contained mechanic, I structured functionality around Unreal Engine components and event-driven communication, allowing gameplay objects to respond to player interactions and changes in the environment. This approach helped keep the systems organized while making it easier to expand the prototype with additional puzzles and interactions."
+                ],
+
+                gameplaySystems: [ 
+                    { 
+                        name: "Player Movement", 
+                        description: "Implemented first-person player movement and navigation using Unreal Engine's Enhanced Input system." 
+                    }, 
+                    { 
+                        name: "Object Interaction", 
+                        description: "Developed a line-tracing interaction system that allows the player to detect and interact with objects in the environment." 
+                    }, 
+                    { 
+                        name: "Item Pickups", 
+                        description: "Implemented collectible item interactions that allow the player to acquire objects required for puzzle progression." 
+                    }, 
+                    { 
+                        name: "Pressure Plates", 
+                        description: "Created pressure plate interactions that respond to objects placed on them to trigger environmental gameplay events." 
+                    }, 
+                    { 
+                        name: "Dynamic Lighting", 
+                        description: "Implemented dynamic lighting behavior that responds to gameplay interactions and environmental events." 
+                    }, 
+                    { 
+                        name: "C++ Delegates", 
+                        description: "Used C++ delegates to communicate gameplay events between systems while reducing direct dependencies between components." 
+                    }, 
+                    { 
+                        name: "Actor Components", 
+                        description: "Organized reusable gameplay functionality into Unreal Engine actor components to promote modular system design." 
+                    }, 
+                    { 
+                        name: "Gameplay State", 
+                        description: "Implemented gameplay state behavior to manage transitions between active gameplay and other game states." 
+                    } 
+                ], 
+                levelDesign: 
+                [ 
+                    "I also contributed to the game's level design by structuring the environment around exploration and puzzle-solving. I designed room layouts and gameplay sequences that introduced mechanics progressively, requiring the player to identify interactive objects, manipulate the environment, and use collected items to advance.", 
+                    "The level design was closely connected to the gameplay systems I implemented. Pressure plates, item pickups, lighting interactions, and environmental objects were positioned to create puzzle sequences that encouraged players to experiment with the mechanics and understand how different systems interacted with one another." 
+                ]
+            },
+            implementation: [
+                "Crypt Raider was developed in Unreal Engine 5 using C++, with gameplay functionality organized around modular systems and Unreal Engine components. I implemented the player interaction system using line tracing to detect objects in the player's view, allowing the player to interact with relevant objects without requiring direct references between the player and every interactable actor.",
+
+                "The Enhanced Input system was used to handle player controls and interaction input. This separated input actions from the underlying gameplay logic and provided a flexible foundation for implementing first-person movement and object interaction.",
+
+                "I used C++ delegates to communicate gameplay events between systems. For example, interactions with pressure plates and other environmental objects could trigger changes elsewhere in the level without requiring tightly coupled references between individual gameplay actors. This event-driven approach helped make the systems more modular and reusable.",
+
+                "I also used actor components to separate reusable gameplay functionality from individual actors. This allowed common behaviors to be attached to different gameplay objects while keeping each system responsible for a specific function. Combined with Unreal Engine's collision and interaction systems, this provided the foundation for item pickups, environmental puzzles, and other player interactions.",
+
+                "Throughout development, I used Unreal Engine's documentation and C++ to research unfamiliar APIs and implement the systems required for the prototype. I also used GitHub for source control and version management throughout development."
+            ],
+            challenges: [
+                "In this project, one of the challenges that occured that I had difficulty getting objects such as doors and walls to move once I placed an object on a pedastal. At first, I thought I had to make an event call to the notify the game object that an object has been placed. However, I soon discovered that the implementation became more complicated than it should have been. After this realization, I looked into different ways to address the issue and thats when I encountered dependency injection. By implementing dependency injection, I was able to use the UMOver component to cast the object to move. Form this experience, I learned how to develop object states that are depedent on the actions of the player.",
+                "Another challenge I encountered was having the player pickup items. This action was something I was new to in developing in any game engine, which made it difficult to grasp at first... However, after look at documentationa and a few YouTube videos, I decided to use line tracing and sweeping for the objects to be picked up. In implementing this, I learned about the importance in using line tracing and sweeping for the purpose of creating special tasks based on the line's intersection with game objects in the envrionment."
+            ],
+            future: [
+                "In the future, I want to go back and polish a few gameplay and graphical bugs to improve the overall immersion and experience. For example, I have noticed that the light from the outside of the Crypt does bleed a bit into the crypt. This is a little problematic because the player is meant to be traversing a dark crypt with only torch lights to guide them. However, if there is light from the outside bleeding into the crypt, the player immersion breaks because they are explicitly aware of the outside world; when they are meant to have a curious fixation on if they will see the outside world have wandering through the dark.", 
+                "Another problem I will be fixing in the future is the transformation for the endgame door. When the player places the final object on the pedastal, the door doesn't open, which is likely issue to a bug within the code or a missed implementation that is worth exploring. I would also like to explore the low-level systems to optimize performance and graphical capabilities for a smoother and crispier player experience.",
+            ]
+        }
+    },
+    {
         id: "crownOfExodus",
         title: "Crown of Exodus",
         subtitle: "Become the hero and save the world!",
@@ -430,7 +577,7 @@ export const projects = [
         type: "Game Development",
         role: "Lead Game Programmer and Scrum Master",
         timeframe: "Aug. 2024 - Dec. 2024",
-        development: "5-Person Team",
+        development: "5-Person Team (School Project)",
         status: "Completed",
 
         media: [
@@ -528,7 +675,9 @@ export const projects = [
                 "Another challenge that needed to be resovled during production was ensuring there were no bugs buttons actions. In a few a test sessions, we found a bug were the the button presses weren't be identified by the game system. This happened because the trigger area of the box was positioned incorrectly. To fix, this I adjusted the trigger box in the Unity editor and immediately tested the adjustments. In addiition, I added distinct messages to indicate which actions the player acted upon to enhance player feedback. After solving this challenge, I learned how to raipdly prototype and test for bugs immediately after implementing new features. I also realized that a better approach could have been to have the player choose their actions in turn-based comabt with controls from the keyboard or controller and have a cursor surrounding the options. In the future, I will use approach and lesson to help build more intuitive gameplay systems and user experience."
             ],
             future: [
-                "In the future, I would like to focus on testing and improving the performance of the game. Improving an aspect, such as running the frame rate at a consistent pace of 120 fps. I want to touch upon this because its important for a game  satisfy the player's needs in not just gameplay features, but ehind the scenes while the game us running. "
+                "In the future, I would like to focus on incorporating party members and reiterating on the turn-based combat. As well as testing and improving the performance of the game.",
+                "At the moment, there is one party member throughout the course of the game, but my team and I recognized that one of the core aspects of RPGs is being able to forge a bond with your party members through meaningful encounters and sequences during gameplay. In a future build, we will work to incorporate this by having the player meet party members through the course of their journey and interact with them. This also enables us to evolve the turn-based combat add a little more complexities; both for party-members and enemies. Our current turn-based combat is good, but a little bit on the simple side to prevent player frustration and meet the project requirements within the set time frame assigned to us. However, we can't add party members without evolving our current combat because the game would become to easy... Thus, the evolution of our turn-based combat is a natural step forward with the development of The Crown of Exodus.",
+                "Improving an aspect, such as running the frame rate at a consistent pace of 120 fps. I want to touch upon this because its important for a game satisfy the player's needs in not just gameplay features, but behind the scenes while the game us running."
             ]
         }
     },
@@ -645,7 +794,7 @@ export const projects = [
         type: "Game Development",
         role: "Lead Game Programmer and Designer",
         timeframe: "Jan. 2024 - Apr. 2024",
-        development: "4-Person Team",
+        development: "4-Person Team (School Project)",
         status: "Finished",
 
         media: [
@@ -732,7 +881,8 @@ export const projects = [
                 "As the lead programmer, I was in charge of programming and directing the various systems for our game. This was only my second time using Unity and C#, but it was my first time trying to teach it to others and in a 2D environment. To direct and teach my teammates, I used class time as an opportunity to discuss the inner workings of Unity and how to program in C#; while also leaving notes and comments within lines in the script. Additionally, to improve my scripting abilities, I looked into a lot of documentation on the official Unity page and designed multiple algorithms around the 2D vector. Overall, I learned how to adapt to being in a leadership role and exercised my problem solving skills in an unfamilar project environment."
             ],
             future: 
-            ["At the moment, there are no plans among me and my team members to revist the the project. However, a few team members and I have expressed working together again on a 2D game with the lessons learned from this project.",
+            [
+                "One aspect of Project Not Zelda that the team and I are interested in revisiting is the addition of dungeon puzzles. As we know, puzzles are an integral element of The Legend Of Zelda series and due to time constraints, we unfortunately had to cut it out for our project. However, we'd like to implement this in a revist because it would allow players to think about how they can use their abilities to manipulate their environment to progress forward in the dungeon. We would like incorporate several distinct scripts for specific puzzles in the dungeon to flesh the game out and deliver a greater sense of player satisfacation.",
             ]
         }
     },
@@ -765,108 +915,6 @@ export const projects = [
             implementation: "...",
             challenges: "...",
             future: "..."
-        }
-    },
-    {
-        id: "cryptRaider",
-        title: "Crypt Raider",
-        subtitle: "Raid the Crypt to escape",
-        description:
-            "An Unreal Engine 5 gameplay programming first-person puzzle adventure prototype exploring line tracing, C++ delegates, enhanced input system, components, dynamic lighting, pressure plates, and item pickups.",
-        category: "Game Development",
-
-        image: cryptRaider,
-
-        technologies: [
-            "Unreal Engine 5",
-            "C++",
-            "GitHub",
-        ],
-
-        demo: "https://youtu.be/-aq6ZBmH-2k",
-        github: "https://github.com/IshKwayisi1232004/CryptRaider",
-
-        type: "Game Development",
-        role: "Game Programmer", 
-        timeframe: "Dec. 2024 - Jan. 2025",
-        development: "Solo",
-        status: "Completed",
-
-        media: [
-            {
-                type: "image",
-                src: cryptRaider,
-                alt: "Hero image"
-            }
-        ],
-
-        sections: {
-            project: "Crypt Raider is 3D first-person puzzle adventure protoype 3D game development programming and implementation. In this prototype, the player must find objects in their surroundings to place uppon pressure plates to escape the crypyt.",
-            designAndDevelopment: {
-                introduction: [
-                    "As a gameplay programmer, I was responsible for designing and implementing several of the core systems that drive Crypt Raider's moment-to-moment gameplay. I developed gameplay systems in Unreal Engine 5 using C++, including first-person player movement, object interaction, item pickups, pressure plates, dynamic lighting, and gameplay state management. These systems work together to create the game's exploration and puzzle-solving mechanics while demonstrating the use of Unreal Engine's input, collision, component, and event-driven systems.",
-
-                    "The project also gave me experience designing gameplay around modular and reusable systems. Rather than implementing each interaction as a self-contained mechanic, I structured functionality around Unreal Engine components and event-driven communication, allowing gameplay objects to respond to player interactions and changes in the environment. This approach helped keep the systems organized while making it easier to expand the prototype with additional puzzles and interactions."
-                ],
-
-                gameplaySystems: [ 
-                    { 
-                        name: "Player Movement", 
-                        description: "Implemented first-person player movement and navigation using Unreal Engine's Enhanced Input system." 
-                    }, 
-                    { 
-                        name: "Object Interaction", 
-                        description: "Developed a line-tracing interaction system that allows the player to detect and interact with objects in the environment." 
-                    }, 
-                    { 
-                        name: "Item Pickups", 
-                        description: "Implemented collectible item interactions that allow the player to acquire objects required for puzzle progression." 
-                    }, 
-                    { 
-                        name: "Pressure Plates", 
-                        description: "Created pressure plate interactions that respond to objects placed on them to trigger environmental gameplay events." 
-                    }, 
-                    { 
-                        name: "Dynamic Lighting", 
-                        description: "Implemented dynamic lighting behavior that responds to gameplay interactions and environmental events." 
-                    }, 
-                    { 
-                        name: "C++ Delegates", 
-                        description: "Used C++ delegates to communicate gameplay events between systems while reducing direct dependencies between components." 
-                    }, 
-                    { 
-                        name: "Actor Components", 
-                        description: "Organized reusable gameplay functionality into Unreal Engine actor components to promote modular system design." 
-                    }, 
-                    { 
-                        name: "Gameplay State", 
-                        description: "Implemented gameplay state behavior to manage transitions between active gameplay and other game states." 
-                    } 
-                ], 
-                levelDesign: 
-                [ 
-                    "I also contributed to the game's level design by structuring the environment around exploration and puzzle-solving. I designed room layouts and gameplay sequences that introduced mechanics progressively, requiring the player to identify interactive objects, manipulate the environment, and use collected items to advance.", 
-                    "The level design was closely connected to the gameplay systems I implemented. Pressure plates, item pickups, lighting interactions, and environmental objects were positioned to create puzzle sequences that encouraged players to experiment with the mechanics and understand how different systems interacted with one another." 
-                ]
-            },
-            implementation: [
-                "Crypt Raider was developed in Unreal Engine 5 using C++, with gameplay functionality organized around modular systems and Unreal Engine components. I implemented the player interaction system using line tracing to detect objects in the player's view, allowing the player to interact with relevant objects without requiring direct references between the player and every interactable actor.",
-
-                "The Enhanced Input system was used to handle player controls and interaction input. This separated input actions from the underlying gameplay logic and provided a flexible foundation for implementing first-person movement and object interaction.",
-
-                "I used C++ delegates to communicate gameplay events between systems. For example, interactions with pressure plates and other environmental objects could trigger changes elsewhere in the level without requiring tightly coupled references between individual gameplay actors. This event-driven approach helped make the systems more modular and reusable.",
-
-                "I also used actor components to separate reusable gameplay functionality from individual actors. This allowed common behaviors to be attached to different gameplay objects while keeping each system responsible for a specific function. Combined with Unreal Engine's collision and interaction systems, this provided the foundation for item pickups, environmental puzzles, and other player interactions.",
-
-                "Throughout development, I used Unreal Engine's documentation and C++ to research unfamiliar APIs and implement the systems required for the prototype. I also used GitHub for source control and version management throughout development."
-            ],
-            challenges: [
-                "In this project, one of the challenges that occured that I had difficulty getting objects such as doors and walls to move once I placed an object on a pedastal. At first, I thought I had to make an event call to the notify the game object that an object has been placed. However, I soon discovered that the implementation became more complicated than it should have been. After this realization, I looked into different ways to address the issue and thats when I encountered dependency injection. By implementing dependency injection, I was able to use the UMOver component to cast the object to move. Form this experience, I learned how to develop object states that are depedent on the actions of the player.",
-                "Another challenge I encountered was having the player pickup items. This action was something I was new to in developing in any game engine, which made it difficult to grasp at first... However, after look at documentationa and a few YouTube videos, I decided to use line tracing and sweeping for the objects to be picked up. In implementing this, I learned about the importance in using line tracing and sweeping for the purpose of creating special tasks based on the line's intersection with game objects in the envrionment."
-            ],
-            future: 
-            ["In the future, I want to go back and polish a few gameplay and graphical bugs because for the most part everything works as it should. However, I have noticed that the light from the outside fot Crypt does bleed a bit into the crypt and one of the doors that is meant to open is a bit faulty. I would also like to explore the low-level systems to optimize performance and graphical capabilities.",
-            ]
         }
     },
     {
