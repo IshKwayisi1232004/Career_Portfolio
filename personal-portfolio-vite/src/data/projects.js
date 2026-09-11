@@ -7,8 +7,12 @@ import crownOfExodusScreenshot3 from "../assets/CrownOfExodus/Crown_Of_Exodus_3.
 import crownOfExodusIntro from "../assets/CrownOfExodus/Blue_Kingdom_Boss_Demo.mp4";
 import crownOfExodusBoss from "../assets/CrownOfExodus/Intro_Cutscene.mp4";
 
-
+// Dragon Locomotion Prototype Imports
 import soarDragonLocomotionImage from "../assets/Soar_Thumbnail.png";
+import soarDragonScreen1 from "../assets/DragonLocomotion/DragonLocomotion_1.png";
+import soarDragonScreen2 from "../assets/DragonLocomotion/DragonLocomotion_2.png";
+import soarDragonScreen3 from "../assets/DragonLocomotion/DragonLocomotion_3.png";
+
 import roamieImage from "../assets/RoamieThumbnail.png";
 import researchImage from "../assets/ResearchThumbnail.png";
 import aniverseImage from "../assets/AniVerse.png";
@@ -68,6 +72,21 @@ export const projects = [
                 type: "image",
                 src: soarDragonLocomotionImage,
                 alt: "Hero image"
+            },
+            {
+                type: "image",
+                src: soarDragonScreen1,
+                alt: "Screenshot 1"
+            },
+            {
+                type: "image",
+                src: soarDragonScreen2,
+                alt: "Screenshot 2"
+            },
+            {
+                type: "image",
+                src: soarDragonScreen3,
+                alt: "Screenshot 3"
             }
         ],
 
