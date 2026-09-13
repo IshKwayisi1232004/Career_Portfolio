@@ -55,7 +55,9 @@ export const projects = [
         technologies: [
             "Unreal Engine 5",
             "C++",
-            "Git",
+            "Git LFS",
+            "Enhanced Input",
+            "Animation Blueprints"
         ],
 
         demo: "https://your-demo-url.com",
@@ -149,13 +151,13 @@ export const projects = [
             challenges: [
                 "One of the major challenges during development accurately and smoothly transitioning the player character from ground to ariel and vice-versa. After running a few tests on new implementations regarding the transition states, I found that my player would stuck in one state and not transition to the other. For example, when I implemented the return to ground movement after touching the ground while in flight, the player character would persist in the flight state. To solve this issue, I first used Unreal Engine's logging to identify the MovementMode of the player and diagnosed that despite the player touched the ground, the Unreal's CharacterMoveComponent still identified the player in flight mode. This enabled me to use a line trace from the player capsule to detect how far the player is from the ground and if line trace hit the ground, the player would transition into ground mode. From this, I learned about the significance of using Unreal Engine's logging to identify issues quickly and iterate on intial implementations.", 
                 
-                "Another challenge that I encountered was perserving ground velocity (from the four ground states: idle, walk, run, charge) into flight. The issue at first was that whenever I would transition into flight, the player character would perserve their velocity when either walking, running or charging. Instead they'd use the default speed from the idle state. What I did to solve the issue was have Unreal capture the velocity speed of the player at the moment they transition into flight. In imnplementation, I set the GetCharacterMovement()->MaxFlySpeed to the current FlightSpeed and clamped it to prevent an unreasonable amount of speed to be generated. From this, I lreaned how to preserve velocity when the player is transitions into a new state amd prevent potentially unpredictable calculations."
+                "Another challenge that I encountered was perserving ground velocity (from the four ground states: idle, walk, run, charge) into flight. The issue at first was that whenever I would transition into flight, the player character would perserve their velocity when either walking, running or charging. Instead they'd use the default speed from the idle state. What I did to solve the issue was have Unreal capture the velocity speed of the player at the moment they transition into flight. In imnplementation, I set the GetCharacterMovement()->MaxFlySpeed to the current FlightSpeed and clamped it to prevent an unreasonable amount of speed to be generated. From this, I learned how to preserve character velocity when the player transitions into a new state, alongside preventing unpredictable calculations."
             ],
             future: [
                 "Dragon Locomotion is still currently under development, as the first iteration of the prototype is complete. However, as I mentioned this is the first iteration there is still more I want to do with it.",
                 "My next steps are to refine and polish the flight mechanics, as there are a few bugs and issues that are occuring. For instance, when the player takes to the skies, they instantly lose forward momentum without flapping the dragon's wings. My intention is to have the dragon carry forward momentum, but lose speed if they aren't engaging with the game and slowly glide downward to ground level as a result.",
-                "Speaking of engaging, I'd like to explore ways for the player to engage with the environment to create more momentum and lift. That way the player is an active particpant during the prototype. The idea is to learn and have my own interpretation of the new Spyro game coming Spring 2027, while injecting some gameplay DNA from the Sonic The Hedgehog series.", 
-                "Afterwards, I would like to focus using the custom built ground and ariel locomotion I built and transform it into its own component system. I want to explore this avenue because it would allow me to create behavior that Unreal Engine does not provide and makes my system reusable. Which I value, since my ultimate goal is to present this as a plugin in the Unreal Engine asset store."
+                "Another improvement I'd like to make is explore and implement ways for the player to engage with the environment to create lift and generate more forward momentum. Employing the player to become an active participant while playing/testing the prototype.", 
+                "Afterwards, I would like to Refactor the locomotion architecture into a dedicated movement component to improve modularity and explore Unreal Engine's lower-level movement systems."
             ]
         }
     },
@@ -459,7 +461,7 @@ export const projects = [
         ],
 
         demo: "https://youtu.be/-aq6ZBmH-2k",
-        github: "https://github.com/IshKwayisi1232004/CryptRaider",
+        github: "https://github.com/IshKwayisi1232004/CryptRaider_UE5",
 
         type: "Game Development",
         role: "Game Programmer", 
